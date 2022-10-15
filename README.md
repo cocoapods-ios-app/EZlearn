@@ -66,8 +66,7 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
    * 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<a href="https://ibb.co/37dDPZN"><img src="https://i.ibb.co/mGTLPWq/IMG-2027.jpg" alt="IMG-2027" border="0"></a>
 
 ### [BONUS] Digital Wireframes & Mockups
 
