@@ -69,6 +69,7 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 <a href="https://ibb.co/37dDPZN"><img src="https://i.ibb.co/mGTLPWq/IMG-2027.jpg" alt="IMG-2027" border="0"></a>
 
 ### [BONUS] Digital Wireframes & Mockups
+See #2 and #3.
 
 ### [BONUS] Interactive Prototype
 
