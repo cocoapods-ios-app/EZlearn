@@ -66,8 +66,7 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
    * 
 
 ## Wireframes
-<a href="https://ibb.co/37dDPZN"><img src="https://i.ibb.co/mGTLPWq/IMG-2027.jpg" alt="IMG-2027" border="0"></a>
-![](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=1152&height=1138)
+[](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=1152&height=1138)
 
 
 
