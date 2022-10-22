@@ -40,21 +40,24 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 
 ### 2. Screen Archetypes
 
-![](https://i.imgur.com/nIhADim.png)
+<img src="https://i.imgur.com/nIhADim.png" height=500>
    * Allowing users to have multiple folders
    * Allowing users to create new folders
-![](https://i.imgur.com/99XC3WM.png)
+
+<img src="https://i.imgur.com/99XC3WM.png" height=500>
    * Overview of a folder's homescreen
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-![](https://i.imgur.com/nIhADim.png)
-   * User's homescreen
-![](https://i.imgur.com/ipDMugu.png)
+<img src="https://i.imgur.com/nIhADim.png" height=500>
+   * User's homescreen 
+ 
+<img src="https://i.imgur.com/ipDMugu.png" height=500>
    * Allowing users to search for studying resources and add them to their respective folders
-![](https://i.imgur.com/RD6Uque.png)
+ 
+<img src="https://i.imgur.com/RD6Uque.png" height=500>
    * Allowing users to create accounts to store their resources and access from any other IOS devices
 
 **Flow Navigation** (Screen to Screen)
