@@ -59,14 +59,14 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 
 **Flow Navigation** (Screen to Screen)
 
-* ![](https://i.imgur.com/nIhADim.png)
-   * ![](https://i.imgur.com/QAtuVsB.png)
-   * ![](https://i.imgur.com/pIBzvjh.png)
-   * ![](https://i.imgur.com/pjgGC9t.png)
+* <img src="https://i.imgur.com/nIhADim.png" height=200>
+   * <img src="https://i.imgur.com/QAtuVsB.png" height=200>
+   * <img src="https://i.imgur.com/pIBzvjh.png" height=200>
+   * <img src="https://i.imgur.com/pjgGC9t.png" height=200>
    * 
 
 ## Wireframes
-![](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=1152&height=200)
+![](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=576&height=569)
 
 
 ### [BONUS] Interactive Prototype
@@ -79,7 +79,7 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | username      | String   | username of the account holder |
-   | uniqueId      | String|  | unique Id of each task created |
+   | uniqueId      | String   | unique Id of each task created |
    | notes         | String   | additional notes for a task added to folder |
 ### Networking
 #### List of network requests by screen
