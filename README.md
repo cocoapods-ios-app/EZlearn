@@ -66,8 +66,7 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
    * 
 
 ## Wireframes
-![](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=1152&height=1138)
-
+![](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=1152&height=200)
 
 
 ### [BONUS] Interactive Prototype
@@ -75,9 +74,20 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### Folder 
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | username      | String   | username of the account holder |
+   | uniqueId      | String|  | unique Id of each task created |
+   | notes         | String   | additional notes for a task added to folder |
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
--we have to make a account for parse. 
+#### List of network requests by screen
+   - Search Screen
+      - (Read/GET) Query of all post related to a study topic
+      - (Add/POST) Add a post into a study folder
+      - (Delete) Delete a post added to a study folder from that study folder
+   - Create Folder Screen
+      - (Create/POST) Create a new study topic folder
+   - Main Profile Screen
+      - (Read/GET) Query logged in user study folders
