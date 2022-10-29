@@ -29,9 +29,8 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 **Required Must-have Stories**
 
 * [ ] User must be able to add learning goals
-* [ ] User must be able to save resources on learning goals in a folder
-* [ ] User must be able to search for resources on the app
 * [ ] User must be able to link those resources to the learning goals
+* [ ] User must be able to search for resources on the app
 
 **Optional Nice-to-have Stories**
 
