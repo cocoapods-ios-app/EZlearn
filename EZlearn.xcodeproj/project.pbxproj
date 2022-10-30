@@ -16,6 +16,9 @@
 		A1E022FD290CD30E001A2B12 /* EZlearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022FC290CD30E001A2B12 /* EZlearnTests.swift */; };
 		A1E02307290CD30E001A2B12 /* EZlearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02306290CD30E001A2B12 /* EZlearnUITests.swift */; };
 		A1E02309290CD30E001A2B12 /* EZlearnUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02308290CD30E001A2B12 /* EZlearnUITestsLaunchTests.swift */; };
+		A1E02316290DA3EA001A2B12 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02315290DA3EA001A2B12 /* AddTaskViewController.swift */; };
+		A1E02318290DA9E0001A2B12 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */; };
+		A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02319290DD63B001A2B12 /* UserTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A1E02302290CD30E001A2B12 /* EZlearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZlearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E02306290CD30E001A2B12 /* EZlearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZlearnUITests.swift; sourceTree = "<group>"; };
 		A1E02308290CD30E001A2B12 /* EZlearnUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZlearnUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1E02315290DA3EA001A2B12 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		A1E02319290DD63B001A2B12 /* UserTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				A1E022EE290CD30E001A2B12 /* Assets.xcassets */,
 				A1E022F0290CD30E001A2B12 /* LaunchScreen.storyboard */,
 				A1E022F3290CD30E001A2B12 /* Info.plist */,
+				A1E02315290DA3EA001A2B12 /* AddTaskViewController.swift */,
+				A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */,
+				A1E02319290DD63B001A2B12 /* UserTask.swift */,
 			);
 			path = EZlearn;
 			sourceTree = "<group>";
@@ -259,7 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E022EA290CD30B001A2B12 /* ViewController.swift in Sources */,
+				A1E02316290DA3EA001A2B12 /* AddTaskViewController.swift in Sources */,
+				A1E02318290DA9E0001A2B12 /* TaskTableViewCell.swift in Sources */,
 				A1E022E6290CD30B001A2B12 /* AppDelegate.swift in Sources */,
+				A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */,
 				A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
