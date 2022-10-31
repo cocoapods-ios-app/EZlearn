@@ -35,7 +35,7 @@ class AddTaskViewController: UIViewController {
             let navController = segue.destination as! UINavigationController
             let controller = navController.viewControllers[0] as! ViewController
             
-            let newTask = UserTask()
+            var newTask = UserTask()
             newTask.name = taskField.text  ?? ""
             
             controller.taskToAdd = newTask

@@ -19,6 +19,7 @@
 		A1E02316290DA3EA001A2B12 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02315290DA3EA001A2B12 /* AddTaskViewController.swift */; };
 		A1E02318290DA9E0001A2B12 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */; };
 		A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02319290DD63B001A2B12 /* UserTask.swift */; };
+		A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A1E02315290DA3EA001A2B12 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		A1E02319290DD63B001A2B12 /* UserTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTask.swift; sourceTree = "<group>"; };
+		A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				A1E02315290DA3EA001A2B12 /* AddTaskViewController.swift */,
 				A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */,
 				A1E02319290DD63B001A2B12 /* UserTask.swift */,
+				A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */,
 			);
 			path = EZlearn;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				A1E022E6290CD30B001A2B12 /* AppDelegate.swift in Sources */,
 				A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */,
 				A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */,
+				A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserTask {
+struct UserTask:Codable {
     
     var name: String = ""
     var isDone: Bool = false
