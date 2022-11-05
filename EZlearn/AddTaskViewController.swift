@@ -38,7 +38,7 @@ class AddTaskViewController: UIViewController {
             var newTask = UserTask()
             newTask.name = taskField.text  ?? ""
             
-            controller.taskToAdd = newTask
+            //controller.taskToAdd = newTask
             //print(controller.tasks.count)
            
             //controller.taskToAddName = taskField.text ?? ""

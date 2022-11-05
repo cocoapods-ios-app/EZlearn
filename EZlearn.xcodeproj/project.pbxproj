@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0BD7A2916192300E69F4B /* Constants.swift */; };
+		A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
+		A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
+		A1A0BD7F291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1E022E6290CD30B001A2B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E5290CD30B001A2B12 /* AppDelegate.swift */; };
 		A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */; };
 		A1E022EA290CD30B001A2B12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E9290CD30B001A2B12 /* ViewController.swift */; };
@@ -20,6 +24,7 @@
 		A1E02318290DA9E0001A2B12 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */; };
 		A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02319290DD63B001A2B12 /* UserTask.swift */; };
 		A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */; };
+		F0EF7FAB14C943A73D22E221 /* Pods_EZlearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506B022C6C98E893054BECEC /* Pods_EZlearn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		506B022C6C98E893054BECEC /* Pods_EZlearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZlearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C67D3702A5C97AEDFA5BDFF /* Pods-EZlearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZlearn.release.xcconfig"; path = "Target Support Files/Pods-EZlearn/Pods-EZlearn.release.xcconfig"; sourceTree = "<group>"; };
+		A1A0BD7A2916192300E69F4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; path = "../../Downloads/client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		A1E022E2290CD30B001A2B12 /* EZlearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZlearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E022E5290CD30B001A2B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +66,8 @@
 		A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		A1E02319290DD63B001A2B12 /* UserTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTask.swift; sourceTree = "<group>"; };
 		A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavViewController.swift; sourceTree = "<group>"; };
+		A1FCBFFF2916D8A200530724 /* libGoogleAPIClientForREST.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleAPIClientForREST.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E9E7811EAAAC2B4C9BAE2A /* Pods-EZlearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZlearn.debug.xcconfig"; path = "Target Support Files/Pods-EZlearn/Pods-EZlearn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0EF7FAB14C943A73D22E221 /* Pods_EZlearn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,13 +96,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3229FA3B62DF9F466A8182D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8E9E7811EAAAC2B4C9BAE2A /* Pods-EZlearn.debug.xcconfig */,
+				9C67D3702A5C97AEDFA5BDFF /* Pods-EZlearn.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A1E022D9290CD30B001A2B12 = {
 			isa = PBXGroup;
 			children = (
+				A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */,
 				A1E022E4290CD30B001A2B12 /* EZlearn */,
 				A1E022FB290CD30E001A2B12 /* EZlearnTests */,
 				A1E02305290CD30E001A2B12 /* EZlearnUITests */,
 				A1E022E3290CD30B001A2B12 /* Products */,
+				3229FA3B62DF9F466A8182D3 /* Pods */,
+				BAA99C85B87035B5C210D7F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +142,7 @@
 				A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */,
 				A1E02319290DD63B001A2B12 /* UserTask.swift */,
 				A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */,
+				A1A0BD7A2916192300E69F4B /* Constants.swift */,
 			);
 			path = EZlearn;
 			sourceTree = "<group>";
@@ -139,6 +164,15 @@
 			path = EZlearnUITests;
 			sourceTree = "<group>";
 		};
+		BAA99C85B87035B5C210D7F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1FCBFFF2916D8A200530724 /* libGoogleAPIClientForREST.a */,
+				506B022C6C98E893054BECEC /* Pods_EZlearn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1E0230C290CD30E001A2B12 /* Build configuration list for PBXNativeTarget "EZlearn" */;
 			buildPhases = (
+				C7C32BCC8CCD41016C83806A /* [CP] Check Pods Manifest.lock */,
 				A1E022DE290CD30B001A2B12 /* Sources */,
 				A1E022DF290CD30B001A2B12 /* Frameworks */,
 				A1E022E0290CD30B001A2B12 /* Resources */,
+				532C0B9E53EF82F4AC532291 /* [CP] Copy Pods Resources */,
+				38EEEC03FDE6E9DD98AACB89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,6 +283,7 @@
 				A1E022F2290CD30E001A2B12 /* LaunchScreen.storyboard in Resources */,
 				A1E022EF290CD30E001A2B12 /* Assets.xcassets in Resources */,
 				A1E022ED290CD30B001A2B12 /* Main.storyboard in Resources */,
+				A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,10 +299,70 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A0BD7F291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38EEEC03FDE6E9DD98AACB89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EZlearn/Pods-EZlearn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EZlearn/Pods-EZlearn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EZlearn/Pods-EZlearn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		532C0B9E53EF82F4AC532291 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EZlearn/Pods-EZlearn-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EZlearn/Pods-EZlearn-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EZlearn/Pods-EZlearn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C32BCC8CCD41016C83806A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EZlearn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1E022DE290CD30B001A2B12 /* Sources */ = {
@@ -277,6 +376,7 @@
 				A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */,
 				A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */,
 				A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */,
+				A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +468,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -448,6 +549,7 @@
 		};
 		A1E0230D290CD30E001A2B12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8E9E7811EAAAC2B4C9BAE2A /* Pods-EZlearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -476,6 +578,7 @@
 		};
 		A1E0230E290CD30E001A2B12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C67D3702A5C97AEDFA5BDFF /* Pods-EZlearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
