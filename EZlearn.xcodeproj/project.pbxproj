@@ -11,6 +11,7 @@
 		A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1A0BD7F291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
+		A1C83AA62918153C0021EDE8 /* ResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */; };
 		A1E022E6290CD30B001A2B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E5290CD30B001A2B12 /* AppDelegate.swift */; };
 		A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */; };
 		A1E022EA290CD30B001A2B12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E9290CD30B001A2B12 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		9C67D3702A5C97AEDFA5BDFF /* Pods-EZlearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZlearn.release.xcconfig"; path = "Target Support Files/Pods-EZlearn/Pods-EZlearn.release.xcconfig"; sourceTree = "<group>"; };
 		A1A0BD7A2916192300E69F4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; path = "../../Downloads/client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
+		A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
 		A1E022E2290CD30B001A2B12 /* EZlearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZlearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E022E5290CD30B001A2B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				A1E02319290DD63B001A2B12 /* UserTask.swift */,
 				A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */,
 				A1A0BD7A2916192300E69F4B /* Constants.swift */,
+				A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */,
 			);
 			path = EZlearn;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C83AA62918153C0021EDE8 /* ResourceTableViewCell.swift in Sources */,
 				A1E022EA290CD30B001A2B12 /* ViewController.swift in Sources */,
 				A1E02316290DA3EA001A2B12 /* AddTaskViewController.swift in Sources */,
 				A1E02318290DA9E0001A2B12 /* TaskTableViewCell.swift in Sources */,
