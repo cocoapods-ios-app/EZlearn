@@ -171,7 +171,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxb-Q4-m2p">
-                                <rect key="frame" x="-2" y="47" width="388" height="44"/>
+                                <rect key="frame" x="-3" y="47" width="389" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -219,7 +219,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="isTyping:" destination="3jn-U2-UrN" eventType="editingChanged" id="n06-1k-JgT"/>
                                     <action selector="stoppedTyping:" destination="3jn-U2-UrN" eventType="editingDidEnd" id="bLW-zS-bGg"/>
                                 </connections>
                             </textField>
@@ -231,6 +230,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
                                 <connections>
                                     <action selector="onAdd:" destination="3jn-U2-UrN" eventType="touchUpInside" id="MAA-dy-5go"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="addMyTask" modalPresentationStyle="fullScreen" id="gge-m8-JPQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learning Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVk-3N-QoT">
@@ -310,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAj-xp-eFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936.92307692307691" y="830.33175355450237"/>
+            <point key="canvasLocation" x="835" y="879"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8vJ-pQ-k0y">
@@ -358,7 +358,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bKp-Ur-L8z"/>
+        <segue reference="gge-m8-JPQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle" catalog="system" width="128" height="123"/>

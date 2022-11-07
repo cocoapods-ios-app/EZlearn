@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A110592629199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A110592429199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld */; };
 		A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0BD7A2916192300E69F4B /* Constants.swift */; };
 		A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		506B022C6C98E893054BECEC /* Pods_EZlearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZlearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C67D3702A5C97AEDFA5BDFF /* Pods-EZlearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZlearn.release.xcconfig"; path = "Target Support Files/Pods-EZlearn/Pods-EZlearn.release.xcconfig"; sourceTree = "<group>"; };
+		A110592529199E3A007BD9A2 /* EZdata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EZdata.xcdatamodel; sourceTree = "<group>"; };
 		A1A0BD7A2916192300E69F4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; path = "../../Downloads/client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */,
 				A1A0BD7A2916192300E69F4B /* Constants.swift */,
 				A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */,
+				A110592429199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld */,
 			);
 			path = EZlearn;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */,
 				A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */,
 				A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */,
+				A110592629199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld in Sources */,
 				A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,6 +729,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A110592429199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A110592529199E3A007BD9A2 /* EZdata.xcdatamodel */,
+			);
+			currentVersion = A110592529199E3A007BD9A2 /* EZdata.xcdatamodel */;
+			path = EZlearnCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1E022DA290CD30B001A2B12 /* Project object */;
 }

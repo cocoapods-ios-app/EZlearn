@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,7 +17,8 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     var videoThumbnails = [String]()
 
     @IBOutlet weak var tableView: UITableView!
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,58 +28,20 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         setDoneOnKeyboard()
         
-        
-        /*
-        
-        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&q=how+to&type=video&maxResults=25&key=AIzaSyAToDe0wO-IUh2W6g3XcnU-3Rh-bhnP2iY")!
-        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-        let task = session.dataTask(with: request) { (data, response, error) in
-             // This will run when the network request returns
-             if let error = error {
-                    print(error.localizedDescription)
-             } else if let data = data {
-                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
-              //if let dictionary = jsonResult as? NSDictionary {
-                  if let itemArray = dataDictionary["items"] as? NSArray {
-                      for case let item as NSDictionary in itemArray {
-                          if let snippet = item["snippet"] as? NSDictionary {
-                              if let title = snippet["title"] as? String {
-                                  self.videoTitles.append(title)
-                              }
-                              if let chanId = snippet["channelTitle"] as? String {
-                                  self.channelIDs.append(chanId)
-                              }
-                              if let thumbNails = snippet["thumbnails"] as? NSDictionary {
-                                  if let defals = thumbNails["high"] as? NSDictionary {
-                                          if let imageUrl = defals["url"] as? String {
-                                              self.videoThumbnails.append(imageUrl)
-                                          }
-                                  }
-                              }
-                              
-                          }
-                          //print(item)
-                      }
-                  }
-              //}
-          //}
-                 
-             }
-            self.tableView.reloadData()
-        }
-        task.resume()*/
-        
-        /*
-        print(self.titles.count)
-        for aTitle in self.titles {
-            print("you got it")
-            print(aTitle)
-        }*/
     }
     
     @IBAction func onAdd(_ sender: Any) {
-        print(taskField.text ?? "")
+        // Insert to CoreData
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "LearningGoal", in: context)
+        let newGoal = LearningGoal(entity: entity!, insertInto: context)
+        newGoal.name = taskField.text
+        do {
+            try context.save()
+        } catch {
+            print("context save error")
+            
+        }
     }
     
     /*
@@ -91,16 +55,11 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addMyTask" {
-            let navController = segue.destination as! UINavigationController
-            let controller = navController.viewControllers[0] as! ViewController
-            
+            let controller = segue.destination as! ViewController
             var newTask = UserTask()
             newTask.name = taskField.text  ?? ""
             
-            //controller.taskToAdd = newTask
-            //print(controller.tasks.count)
-           
-            //controller.taskToAddName = taskField.text ?? ""
+            controller.taskToAdd = newTask
         }
     }
     
@@ -116,7 +75,6 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let url = URL(string: (self.videoThumbnails[indexPath.row])) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 guard let data = data, error == nil else { return }
-                
                 DispatchQueue.main.async { /// execute on main thread
                     cell.videoThumbnail.image = UIImage(data: data)
                 }
@@ -143,12 +101,10 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
-             // This will run when the network request returns
              if let error = error {
                     print(error.localizedDescription)
              } else if let data = data {
                  let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
-              //if let dictionary = jsonResult as? NSDictionary {
                   if let itemArray = dataDictionary["items"] as? NSArray {
                       for case let item as NSDictionary in itemArray {
                           if let snippet = item["snippet"] as? NSDictionary {
@@ -165,13 +121,9 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
                                           }
                                   }
                               }
-                              
                           }
-                          //print(item)
                       }
                   }
-              //}
-          //}
                  
              }
             self.tableView.reloadData()
@@ -179,13 +131,10 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         task.resume()
     }
     
-    @IBAction func isTyping(_ sender: Any) {
-    }
-    
     func setDoneOnKeyboard() {
-        var ViewForDoneButtonOnKeyboard = UIToolbar()
+        let ViewForDoneButtonOnKeyboard = UIToolbar()
         ViewForDoneButtonOnKeyboard.sizeToFit()
-        var btnDoneOnKeyboard = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.dismissKeyboard))
+        let btnDoneOnKeyboard = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.dismissKeyboard))
         ViewForDoneButtonOnKeyboard.items = [btnDoneOnKeyboard]
         taskField.inputAccessoryView = ViewForDoneButtonOnKeyboard
     }
