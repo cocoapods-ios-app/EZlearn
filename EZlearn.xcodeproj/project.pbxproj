@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613EC246291C9F0B00DA5B5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613EC245291C9F0B00DA5B5F /* LoginViewController.swift */; };
 		A110592629199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A110592429199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld */; };
 		A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0BD7A2916192300E69F4B /* Constants.swift */; };
-		A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
-		A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
-		A1A0BD7F291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1C83AA62918153C0021EDE8 /* ResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */; };
 		A1E022E6290CD30B001A2B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E5290CD30B001A2B12 /* AppDelegate.swift */; };
 		A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */; };
@@ -48,10 +46,10 @@
 
 /* Begin PBXFileReference section */
 		506B022C6C98E893054BECEC /* Pods_EZlearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZlearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		613EC245291C9F0B00DA5B5F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9C67D3702A5C97AEDFA5BDFF /* Pods-EZlearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZlearn.release.xcconfig"; path = "Target Support Files/Pods-EZlearn/Pods-EZlearn.release.xcconfig"; sourceTree = "<group>"; };
 		A110592529199E3A007BD9A2 /* EZdata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EZdata.xcdatamodel; sourceTree = "<group>"; };
 		A1A0BD7A2916192300E69F4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; path = "../../Downloads/client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
 		A1E022E2290CD30B001A2B12 /* EZlearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZlearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E022E5290CD30B001A2B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 		A1E022D9290CD30B001A2B12 = {
 			isa = PBXGroup;
 			children = (
-				A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */,
 				A1E022E4290CD30B001A2B12 /* EZlearn */,
 				A1E022FB290CD30E001A2B12 /* EZlearnTests */,
 				A1E02305290CD30E001A2B12 /* EZlearnUITests */,
@@ -149,6 +146,7 @@
 				A1A0BD7A2916192300E69F4B /* Constants.swift */,
 				A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */,
 				A110592429199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld */,
+				613EC245291C9F0B00DA5B5F /* LoginViewController.swift */,
 			);
 			path = EZlearn;
 			sourceTree = "<group>";
@@ -289,7 +287,6 @@
 				A1E022F2290CD30E001A2B12 /* LaunchScreen.storyboard in Resources */,
 				A1E022EF290CD30E001A2B12 /* Assets.xcassets in Resources */,
 				A1E022ED290CD30B001A2B12 /* Main.storyboard in Resources */,
-				A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +294,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +301,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1A0BD7F291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +380,7 @@
 				A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */,
 				A110592629199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld in Sources */,
 				A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */,
+				613EC246291C9F0B00DA5B5F /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UBQY3492JQ;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EZlearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -593,6 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UBQY3492JQ;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EZlearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
