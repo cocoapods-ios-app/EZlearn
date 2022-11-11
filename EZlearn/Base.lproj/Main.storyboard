@@ -523,7 +523,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="●" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9On-Tf-wQu">
-                                <rect key="frame" x="337" y="199" width="11" height="14"/>
+                                <rect key="frame" x="26" y="199" width="11" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
