@@ -250,44 +250,45 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func pinkIsSelected(_ sender: Any) {
         //selectedDotLabel.layer.position = CGPoint(x: 44,y: 219.5)
-        selectedDotLabel.layer.position = CGPoint(x: 39.5, y: 220.0)
+        selectedDotLabel.layer.position = CGPoint(x: 32, y: 206.5)
         selectedColor = 0
         print(selectedDotLabel.layer.position)
     }
     
     @IBAction func orangeIsSelected(_ sender: Any) {
         selectedColor = 1
-        selectedDotLabel.layer.position = CGPoint(x: 91.5, y: 220.0)
+        selectedDotLabel.layer.position = CGPoint(x: 84, y: 206.5)
         print(selectedDotLabel.layer.position)
     }
     
     @IBAction func yellowIsSelected(_ sender: Any) {
         selectedColor = 2
-        selectedDotLabel.layer.position = CGPoint(x: 142.5, y: 220.0)
+        selectedDotLabel.layer.position = CGPoint(x: 135, y: 206.5)
 
     }
     
     @IBAction func lightGreenIsSelected(_ sender: Any) {
         selectedColor = 3
-        selectedDotLabel.layer.position = CGPoint(x: 194.5, y: 220.0)
+        selectedDotLabel.layer.position = CGPoint(x: 187, y: 206.5)
 
     }
     
     @IBAction func darkGreenIsSelected(_ sender: Any) {
         selectedColor = 4
-        selectedDotLabel.layer.position = CGPoint(x: 246.5, y: 220.0)
+        selectedDotLabel.layer.position = CGPoint(x: 239, y: 206.5)
 
     }
     
     @IBAction func turquoiseIsSelected(_ sender: Any) {
         selectedColor = 5
-        selectedDotLabel.layer.position = CGPoint(x: 298.5, y: 220.0)
+        selectedDotLabel.layer.position = CGPoint(x: 291, y: 206.5)
 
     }
     
     @IBAction func blueIsSelected(_ sender: Any) {
         selectedColor = 6
-        selectedDotLabel.layer.position = CGPoint(x: 350.5, y: 220.0)
+        selectedDotLabel.layer.position = CGPoint(x: 343, y: 206.5)
+        // 337, 200
 
     }
     
