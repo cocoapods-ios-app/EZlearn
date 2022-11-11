@@ -9,20 +9,20 @@ import UIKit
 
 class HomeNavViewController: UINavigationController, UINavigationBarDelegate, UIBarPositioningDelegate {
 
-    @IBOutlet weak var navBar: UINavigationBar!
+    //@IBOutlet weak var navBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navBar.delegate = self
+        //navBar.delegate = self
 
 
         // Do any additional setup after loading the view.
     }
     
-
+/*
     func position(for bar: UIBarPositioning) -> UIBarPosition {
      return .topAttached
-    }
+    }*/
 
     /*
     // MARK: - Navigation

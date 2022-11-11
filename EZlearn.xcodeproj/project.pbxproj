@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A110592629199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A110592429199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld */; };
+		A18650A0291ADFEE0090AEA9 /* OpenTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A186509F291ADFEE0090AEA9 /* OpenTaskViewController.swift */; };
 		A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0BD7A2916192300E69F4B /* Constants.swift */; };
 		A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1A0BD7F291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1C83AA62918153C0021EDE8 /* ResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */; };
+		A1DA6CD6291C8B6000EF951C /* NSDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA6CD5291C8B6000EF951C /* NSDict.swift */; };
 		A1E022E6290CD30B001A2B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E5290CD30B001A2B12 /* AppDelegate.swift */; };
 		A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */; };
 		A1E022EA290CD30B001A2B12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E9290CD30B001A2B12 /* ViewController.swift */; };
@@ -50,9 +52,11 @@
 		506B022C6C98E893054BECEC /* Pods_EZlearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZlearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C67D3702A5C97AEDFA5BDFF /* Pods-EZlearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZlearn.release.xcconfig"; path = "Target Support Files/Pods-EZlearn/Pods-EZlearn.release.xcconfig"; sourceTree = "<group>"; };
 		A110592529199E3A007BD9A2 /* EZdata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EZdata.xcdatamodel; sourceTree = "<group>"; };
+		A186509F291ADFEE0090AEA9 /* OpenTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTaskViewController.swift; sourceTree = "<group>"; };
 		A1A0BD7A2916192300E69F4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; path = "../../Downloads/client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
+		A1DA6CD5291C8B6000EF951C /* NSDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDict.swift; sourceTree = "<group>"; };
 		A1E022E2290CD30B001A2B12 /* EZlearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZlearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E022E5290CD30B001A2B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */,
 				A1E022E9290CD30B001A2B12 /* ViewController.swift */,
 				A1E022EB290CD30B001A2B12 /* Main.storyboard */,
+				A186509F291ADFEE0090AEA9 /* OpenTaskViewController.swift */,
 				A1E022EE290CD30E001A2B12 /* Assets.xcassets */,
 				A1E022F0290CD30E001A2B12 /* LaunchScreen.storyboard */,
 				A1E022F3290CD30E001A2B12 /* Info.plist */,
@@ -149,6 +154,7 @@
 				A1A0BD7A2916192300E69F4B /* Constants.swift */,
 				A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */,
 				A110592429199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld */,
+				A1DA6CD5291C8B6000EF951C /* NSDict.swift */,
 			);
 			path = EZlearn;
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DA6CD6291C8B6000EF951C /* NSDict.swift in Sources */,
 				A1C83AA62918153C0021EDE8 /* ResourceTableViewCell.swift in Sources */,
 				A1E022EA290CD30B001A2B12 /* ViewController.swift in Sources */,
 				A1E02316290DA3EA001A2B12 /* AddTaskViewController.swift in Sources */,
@@ -383,6 +390,7 @@
 				A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */,
 				A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */,
 				A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */,
+				A18650A0291ADFEE0090AEA9 /* OpenTaskViewController.swift in Sources */,
 				A110592629199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld in Sources */,
 				A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */,
 			);

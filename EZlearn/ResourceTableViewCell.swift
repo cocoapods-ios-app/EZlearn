@@ -15,9 +15,12 @@ class ResourceTableViewCell: UITableViewCell {
     
     @IBOutlet weak var videoThumbnail: UIImageView!
     
+    @IBOutlet weak var addResourceButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //UITableViewCell.selectio
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,4 +31,8 @@ class ResourceTableViewCell: UITableViewCell {
         videoTitleLabel.lineBreakMode = NSLineBreakMode.byTruncatingTail
     }
 
+    @IBAction func onAddResource(_ sender: Any) {
+        addResourceButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
+        //addResourceButton.backgroundColor = .black
+    }
 }
