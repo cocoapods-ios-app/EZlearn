@@ -65,6 +65,7 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             newGoal.name = taskField.text
             newGoal.colorIndex = Int64(selectedColor)
             newGoal.resources = savedResources
+            newGoal.completed = false
             //print(newGoal.resources ?? "")
             do {
                 try context.save()

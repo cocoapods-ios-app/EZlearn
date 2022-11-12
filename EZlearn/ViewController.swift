@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var cellSelectionColor = UIColor.black
     var taskToDelete = ""
     
+    
     @IBOutlet weak var helloLabel: UITextField!
     var usersName = "User"
     //var navBar = (self as? UIViewController)?.navigationController?;.navigationBar
@@ -84,6 +85,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Fetch Failed")
             }
         }
+        
+        
         
          /*
         // Edit from CoreData
@@ -151,6 +154,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let data = UserDefaults.standard.object(forKey:"usersTasks") as? Data,
            let category = try? JSONDecoder().decode(UserTask.self, from: data) {
@@ -167,8 +171,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.taskName.text = tasks[indexPath.item].name
         cell.goalCell.backgroundColor = hexStringToUIColor(hex: cellColors[Int(tasks[indexPath.item].colorIndex)])
         
+        // edit complete task
+//        saveCompleteTask(completed: tasks[indexPath.item].completed, name: tasks[indexPath.item].name!)
+        cell.setCompleted(tasks[indexPath.item].completed)
+        
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         cellSelectionColor = hexStringToUIColor(hex: cellColors[Int(tasks[indexPath.item].colorIndex)])
         cellSelection = tasks[indexPath.item]
