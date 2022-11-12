@@ -7,4 +7,9 @@
         <attribute name="resources" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Resource" representedClassName="Resource" syncable="YES" codeGenerationType="class"/>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="icon" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
 </model>

@@ -85,8 +85,8 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
         var resourceInfo = allResources[indexPath.row].components(separatedBy: "~")
         
         cell.videoTitleLabel.text = resourceInfo[1]
-        print("kwnfjen")
-        print(resourceInfo[2])
+        //print("kwnfjen")
+        //print(resourceInfo[2])
         cell.channelIDLabel.text = resourceInfo[3]
         /*
         if checkmarks[indexPath.row] {
@@ -145,7 +145,7 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
             return // or fatalError() or whatever
         }
         checkmarks[tableView.indexPath(for: cell)!.row] = true
-        print("hi")
+        //print("hi")
     }
     
     
@@ -153,6 +153,10 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
         //((presentingViewController as! UINavigationController).viewControllers[0] as! ViewController).taskToDelete = goalName.text!
         self.dismiss(animated: true)
         ((presentingViewController as! UINavigationController).viewControllers[0] as! ViewController).deleteTask(goal: theSelectedGoal)
+    }
+    
+    @IBAction func onDismiss(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     
     /*

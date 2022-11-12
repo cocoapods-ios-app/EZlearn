@@ -17,7 +17,6 @@ class TaskTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         goalCell.clipsToBounds = true
-
         goalCell.layer.cornerRadius = 10
         
 

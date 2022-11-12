@@ -154,16 +154,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let data = UserDefaults.standard.object(forKey:"usersTasks") as? Data,
            let category = try? JSONDecoder().decode(UserTask.self, from: data) {
-             print(category.name)
+             //print(category.name)
         }
-        print("DID I RUN FIRST LETS SEEEEE")
+        //print("DID I RUN FIRST LETS SEEEEE")
         return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:TaskTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! TaskTableViewCell
-        print("Count: " + String(tasks.count))
-        print(indexPath.row)
+        //print("Count: " + String(tasks.count))
+        //print(indexPath.row)
         cell.taskName.text = tasks[indexPath.item].name
         cell.goalCell.backgroundColor = hexStringToUIColor(hex: cellColors[Int(tasks[indexPath.item].colorIndex)])
         

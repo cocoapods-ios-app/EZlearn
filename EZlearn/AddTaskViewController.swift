@@ -12,6 +12,8 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBOutlet weak var taskField: UITextField!
+    @IBOutlet weak var dismissButton: UIButton!
+
     let cellReuseIdentifier = "cell2"
     var videoTitles = [String]()
     var channelIDs = [String]()
@@ -40,12 +42,12 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         print(selectedDotLabel.layer.position)
         
-        var bottomLine = CALayer()
+        let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: taskField.frame.height - 1, width: taskField.frame.width, height: 1.0)
-        bottomLine.backgroundColor = UIColor.white.cgColor
+        bottomLine.backgroundColor = CGColor(red: 1, green: 1, blue: 1, alpha: 0.8)
         taskField.borderStyle = UITextField.BorderStyle.none
         taskField.layer.addSublayer(bottomLine)
-        taskField.textColor = .white
+        taskField.textColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.8)
         taskField.font =  UIFont.systemFont(ofSize: 20.0)
 
         
@@ -76,6 +78,10 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
         
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func onDismiss(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
@@ -252,13 +258,13 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         //selectedDotLabel.layer.position = CGPoint(x: 44,y: 219.5)
         selectedDotLabel.layer.position = CGPoint(x: 32, y: 206.5)
         selectedColor = 0
-        print(selectedDotLabel.layer.position)
+        //print(selectedDotLabel.layer.position)
     }
     
     @IBAction func orangeIsSelected(_ sender: Any) {
         selectedColor = 1
         selectedDotLabel.layer.position = CGPoint(x: 84, y: 206.5)
-        print(selectedDotLabel.layer.position)
+        //print(selectedDotLabel.layer.position)
     }
     
     @IBAction func yellowIsSelected(_ sender: Any) {

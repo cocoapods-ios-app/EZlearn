@@ -19,7 +19,13 @@
 		A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1A0BD7F291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
+		A1A8AC5C291FD57C0017BD5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8AC5B291FD57C0017BD5B /* SettingsViewController.swift */; };
+		A1A8AC5E291FDA0B0017BD5B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8AC5D291FDA0B0017BD5B /* SettingsTableViewCell.swift */; };
+		A1A8AC60291FE75B0017BD5B /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1A8AC5F291FE75A0017BD5B /* Montserrat-Regular.ttf */; };
+		A1A8AC62291FE7B90017BD5B /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1A8AC61291FE7B90017BD5B /* Montserrat-Medium.ttf */; };
 		A1C83AA62918153C0021EDE8 /* ResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */; };
+		A1D77929291FED5200DD1BE2 /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1A8AC63291FE9770017BD5B /* SourceSansPro-Light.otf */; };
+		A1D7792B291FFBAE00DD1BE2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7792A291FFBAE00DD1BE2 /* ProfileViewController.swift */; };
 		A1DA6CD6291C8B6000EF951C /* NSDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA6CD5291C8B6000EF951C /* NSDict.swift */; };
 		A1E022E6290CD30B001A2B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E5290CD30B001A2B12 /* AppDelegate.swift */; };
 		A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */; };
@@ -66,7 +72,13 @@
 		A186509F291ADFEE0090AEA9 /* OpenTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTaskViewController.swift; sourceTree = "<group>"; };
 		A1A0BD7A2916192300E69F4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; path = "../../Downloads/client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
+		A1A8AC5B291FD57C0017BD5B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A1A8AC5D291FDA0B0017BD5B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		A1A8AC5F291FE75A0017BD5B /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		A1A8AC61291FE7B90017BD5B /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		A1A8AC63291FE9770017BD5B /* SourceSansPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.otf"; sourceTree = "<group>"; };
 		A1C83AA52918153C0021EDE8 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
+		A1D7792A291FFBAE00DD1BE2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A1DA6CD5291C8B6000EF951C /* NSDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDict.swift; sourceTree = "<group>"; };
 		A1E022E2290CD30B001A2B12 /* EZlearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZlearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E022E5290CD30B001A2B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +163,8 @@
 		A1E022E4290CD30B001A2B12 /* EZlearn */ = {
 			isa = PBXGroup;
 			children = (
+				A1A8AC61291FE7B90017BD5B /* Montserrat-Medium.ttf */,
+				A1A8AC5F291FE75A0017BD5B /* Montserrat-Regular.ttf */,
 				A16B0883291EBE7A00C9F19A /* GoogleService-Info.plist */,
 				A12494F4291EB44A00069037 /* 87271-atom-cascade-loader.json */,
 				A12494F2291EB3A300069037 /* 28893-book-loading.json */,
@@ -159,6 +173,8 @@
 				A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */,
 				A1E022E9290CD30B001A2B12 /* ViewController.swift */,
 				A1E022EB290CD30B001A2B12 /* Main.storyboard */,
+				A1A8AC5D291FDA0B0017BD5B /* SettingsTableViewCell.swift */,
+				A1A8AC63291FE9770017BD5B /* SourceSansPro-Light.otf */,
 				A186509F291ADFEE0090AEA9 /* OpenTaskViewController.swift */,
 				A1E022EE290CD30E001A2B12 /* Assets.xcassets */,
 				A1E022F0290CD30E001A2B12 /* LaunchScreen.storyboard */,
@@ -172,6 +188,8 @@
 				A110592429199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld */,
 				A1DA6CD5291C8B6000EF951C /* NSDict.swift */,
 				A12494EB291EA8C400069037 /* WelcomeViewController.swift */,
+				A1A8AC5B291FD57C0017BD5B /* SettingsViewController.swift */,
+				A1D7792A291FFBAE00DD1BE2 /* ProfileViewController.swift */,
 			);
 			path = EZlearn;
 			sourceTree = "<group>";
@@ -315,11 +333,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D77929291FED5200DD1BE2 /* SourceSansPro-Light.otf in Resources */,
+				A1A8AC60291FE75B0017BD5B /* Montserrat-Regular.ttf in Resources */,
 				A12494EE291EAB5A00069037 /* book.json in Resources */,
 				A16B0884291EBE7B00C9F19A /* GoogleService-Info.plist in Resources */,
 				A1E022F2290CD30E001A2B12 /* LaunchScreen.storyboard in Resources */,
 				A1E022EF290CD30E001A2B12 /* Assets.xcassets in Resources */,
 				A1E022ED290CD30B001A2B12 /* Main.storyboard in Resources */,
+				A1A8AC62291FE7B90017BD5B /* Montserrat-Medium.ttf in Resources */,
 				A12494F3291EB3A300069037 /* 28893-book-loading.json in Resources */,
 				A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 				A12494F5291EB44A00069037 /* 87271-atom-cascade-loader.json in Resources */,
@@ -414,9 +435,12 @@
 				A1E02316290DA3EA001A2B12 /* AddTaskViewController.swift in Sources */,
 				A1E02318290DA9E0001A2B12 /* TaskTableViewCell.swift in Sources */,
 				A1E022E6290CD30B001A2B12 /* AppDelegate.swift in Sources */,
+				A1D7792B291FFBAE00DD1BE2 /* ProfileViewController.swift in Sources */,
 				A12494EC291EA8C400069037 /* WelcomeViewController.swift in Sources */,
 				A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */,
+				A1A8AC5E291FDA0B0017BD5B /* SettingsTableViewCell.swift in Sources */,
 				A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */,
+				A1A8AC5C291FD57C0017BD5B /* SettingsViewController.swift in Sources */,
 				A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */,
 				A18650A0291ADFEE0090AEA9 /* OpenTaskViewController.swift in Sources */,
 				A110592629199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld in Sources */,

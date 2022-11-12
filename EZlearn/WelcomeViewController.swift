@@ -11,11 +11,14 @@ import Lottie
 import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
+import CoreData
 
 class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     let animationView = LottieAnimationView()
-   
+    var signedIn = false
+    var theUser = ""
+
     
     @IBOutlet weak var newToLabel: UIButton!
     // If modifying these scopes, delete your previously saved credentials by
@@ -32,40 +35,43 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDel
           .underlineStyle: NSUnderlineStyle.single.rawValue
       ]
     override func viewDidLoad() {
-        super.viewDidLoad()
-        //GIDSignIn.sharedInstance().signOut()
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
-        let attributeString = NSMutableAttributedString(
+            super.viewDidLoad()
+            //GIDSignIn.sharedInstance().signOut()
+            
+            GIDSignIn.sharedInstance().delegate = self
+            GIDSignIn.sharedInstance().uiDelegate = self
+            let attributeString = NSMutableAttributedString(
                 string: "New to EZlearn? Sign Up",
                 attributes: yourAttributes
-             )
-        newToLabel.setAttributedTitle(attributeString, for: .normal)
-        
-        //signInButton.backgroundColor = UIColor.init(red: 0, green: 0, blue: 15/255, alpha: 1)
-
-
-        // Add a UITextView to display output.
-        output.frame = view.bounds
-        output.isEditable = false
-        output.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
-        output.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        output.isHidden = true
-        view.addSubview(output);
-        
-        
-        //animationView.animation = LottieAnimation.named("28893-book-loading")
-        animationView.animation = LottieAnimation.named("87271-atom-cascade-loader")
-        
-        //LottieAnimation.named("28893-book-loading")
-        print(animationView.animation ?? "nothing found")
+            )
+            newToLabel.setAttributedTitle(attributeString, for: .normal)
+            
+            //signInButton.backgroundColor = UIColor.init(red: 0, green: 0, blue: 15/255, alpha: 1)
+            
+            
+            // Add a UITextView to display output.
+            output.frame = view.bounds
+            output.isEditable = false
+            output.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+            output.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            output.isHidden = true
+            view.addSubview(output);
+            
+            
+            //animationView.animation = LottieAnimation.named("28893-book-loading")
+            animationView.animation = LottieAnimation.named("87271-atom-cascade-loader")
+            
+            //LottieAnimation.named("28893-book-loading")
+            print(animationView.animation ?? "nothing found")
             animationView.frame = containerView.bounds
-        containerView.backgroundColor = .clear
-        animationView.center = containerView.center
+            containerView.backgroundColor = .clear
+            animationView.center = containerView.center
             //animationView.contentMode = .scaleAspectFit
-            animationView.loopMode = .loop
-            animationView.play()
+            animationView.stop()
+            playAnimation()
+            
             view.addSubview(animationView)
+        
 
         // Do any additional setup after loading the view.
         //setUpAnimation()
@@ -73,6 +79,31 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDel
         // Add the sign-in button.
         //view.addSubview(signInButton)
         //signInButton.center = CGPoint(x: view.center.x, y: 600)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do {
+            let results:NSArray = try context.fetch(request) as NSArray
+            print(results)
+            for result in results
+            {
+                theUser = (result as! User).name!
+            }
+        } catch {
+            print("Fetch Failed")
+        }
+                
+        
+        if (theUser.isEmpty) {
+            playAnimation()
+            print("no log in sorry")
+        } else {
+            GIDSignIn.sharedInstance().signIn()
+            
+
+        }
     }
     
     @IBAction func onSignInWithGoogle(_ sender: Any) {
@@ -89,17 +120,19 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDel
             showAlert(title: "Authentication Error", message: error.localizedDescription)
             self.service.authorizer = nil
         } else {
+            signedIn = true
+
             //self.signInButton.isHidden = true
             //self.output.isHidden = false
             self.service.authorizer = user.authentication.fetcherAuthorizer()
             let emailAddress = user.profile?.email
 
             let fullName = user.profile?.name
-            let givenName = user.profile?.givenName
-            let familyName = user.profile?.familyName
+            //let givenName = user.profile?.givenName
+            //let familyName = user.profile?.familyName
 
             let profilePicUrl = user.profile?.imageURL(withDimension: 320)
-            print(fullName)
+            //print(fullName)
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
             let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "homeNav") as! UINavigationController
@@ -108,13 +141,44 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDel
             let homeView = (vc.viewControllers[0] as! ViewController)
             let splitName = fullName?.components(separatedBy: " ")
 
-            self.present(vc, animated: false, completion: nil)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+            let newUser = User(entity: entity!, insertInto: context)
+            newUser.name = fullName
+            newUser.email = emailAddress
+            do {
+                try newUser.icon = String(contentsOf: (profilePicUrl)!)
+            } catch {
+                newUser.icon = ""
+            }
+            do {
+                try context.save()
+                print(newUser)
+            } catch {
+                print("context save error")
+                
+            }
+
+
+            self.present(vc, animated: true, completion: nil)
             
             homeView.usersName = splitName?[0] ?? "User"
 
 
 
             //fetchChannelResource()
+        }
+    }
+    
+    /**
+     This code is from https://github.com/airbnb/lottie-ios/issues/996
+     */
+    func playAnimation() {
+        DispatchQueue.main.async {
+            self.animationView.currentProgress = 0
+            self.animationView.play()
+            self.animationView.loopMode = .loop
         }
     }
 
