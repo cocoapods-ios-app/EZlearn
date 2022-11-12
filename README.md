@@ -75,7 +75,7 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+[This section will be completed in Unit]
 ### Models
 #### Folder 
 
