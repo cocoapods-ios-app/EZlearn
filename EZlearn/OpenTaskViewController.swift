@@ -17,14 +17,16 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
     var cellReuseIdentifier = "cell3"
     var allResources = [String]()
     var checkmarks = [Bool]()
+    var theSelectedGoal : LearningGoal!
 
+    @IBOutlet weak var deleteButtonBorder: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         
         let thevc = (self.presentingViewController as? UINavigationController)?.viewControllers[0] as? ViewController
         //let thevc = navigationController?.viewControllers
         view.backgroundColor = thevc?.cellSelectionColor
-        let theSelectedGoal = thevc?.cellSelection as? LearningGoal
+        theSelectedGoal = thevc?.cellSelection as? LearningGoal
         goalName.text = theSelectedGoal!.name
         
         var appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -62,6 +64,8 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        deleteButtonBorder.layer.borderColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
     }
         //view.backgroundColor =
 
@@ -142,6 +146,13 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
         }
         checkmarks[tableView.indexPath(for: cell)!.row] = true
         print("hi")
+    }
+    
+    
+    @IBAction func onDeleteTask(_ sender: Any) {
+        //((presentingViewController as! UINavigationController).viewControllers[0] as! ViewController).taskToDelete = goalName.text!
+        self.dismiss(animated: true)
+        ((presentingViewController as! UINavigationController).viewControllers[0] as! ViewController).deleteTask(goal: theSelectedGoal)
     }
     
     /*

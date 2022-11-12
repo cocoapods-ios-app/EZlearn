@@ -7,7 +7,11 @@
 
 import UIKit
 import CoreData
+import FirebaseCore
+import Firebase
+import GoogleSignIn
 
+/*
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -29,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     
         // Override point for customization after application launch.
+        //Firebase.app
+        FirebaseApp.configure()
         return true
     }
 
@@ -47,16 +53,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
+}*/
 
 
-/*import GoogleSignIn
+import GoogleSignIn
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+
+        let container = NSPersistentContainer(name: "EZlearnCoreData")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error {
+
+                fatalError("Unresolved error, \((error as NSError).userInfo)")
+            }
+        })
+        return container
+    }()
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
         // Initialize Google sign-in.
@@ -81,4 +100,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-*/
+

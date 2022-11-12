@@ -21,7 +21,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var cellColors = ["8C123E", "8C6312", "7E741A", "527E1A", "1A7E3C", "1A7E6C", "12768C"]
     var cellSelection : LearningGoal!
     var cellSelectionColor = UIColor.black
+    var taskToDelete = ""
     
+    @IBOutlet weak var helloLabel: UITextField!
+    var usersName = "User"
     //var navBar = (self as? UIViewController)?.navigationController?;.navigationBar
 
     override func viewDidLoad() {
@@ -29,6 +32,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        helloLabel.text = "Hello " + usersName
+        helloLabel.font = UIFont.systemFont(ofSize: 30)
+        
         
         /*
         let mySpecialViewController = ViewController()
@@ -118,16 +125,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func deleteTask(goal: LearningGoal) {
+        // Delete from CoreData
+        //print("im here")
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "LearningGoal")
+        do {
+            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+
+            let results:NSArray = try context.fetch(request) as NSArray
+            for result in results {
+                let theGoal = result as! LearningGoal
+                if theGoal.isEqual(goal) {
+                    context.delete(theGoal)
+                    try context.save()
+                    taskToDelete = ""
+                    tasks.remove(at: tasks.firstIndex(of: goal)!)
+                    tableView.reloadData()
+
+                    
+                }
+            }
+        } catch {
+            print("Fetch Failed")
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let data = UserDefaults.standard.object(forKey:"usersTasks") as? Data,
            let category = try? JSONDecoder().decode(UserTask.self, from: data) {
              print(category.name)
         }
+        print("DID I RUN FIRST LETS SEEEEE")
         return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:TaskTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! TaskTableViewCell
+        print("Count: " + String(tasks.count))
+        print(indexPath.row)
         cell.taskName.text = tasks[indexPath.item].name
         cell.goalCell.backgroundColor = hexStringToUIColor(hex: cellColors[Int(tasks[indexPath.item].colorIndex)])
         
