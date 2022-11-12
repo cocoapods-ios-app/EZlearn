@@ -167,6 +167,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.taskName.text = tasks[indexPath.item].name
         cell.goalCell.backgroundColor = hexStringToUIColor(hex: cellColors[Int(tasks[indexPath.item].colorIndex)])
         
+        cell.setCompleted(tasks[indexPath.item].completed)
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
