@@ -8,4 +8,5 @@ target 'EZlearn' do
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
     pod 'FirebaseAuth'
+    pod 'Parse'
 end

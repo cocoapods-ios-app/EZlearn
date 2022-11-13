@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Parse
 
 class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,6 +21,10 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     var videoThumbnails = [String]()
     var videoIds = [String]()
     var savedResources = String()
+    var user = PFUser.current()
+    var goal = PFObject(className: "goal")
+    var resources = [PFObject]()
+    var goals = [PFObject]()
     
     var dict = [String:(String, String, String)]()
     //var dict = Dictionary<String, String()>
@@ -65,6 +70,26 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             newGoal.name = taskField.text
             newGoal.colorIndex = Int64(selectedColor)
             newGoal.resources = savedResources
+            goal["name"] = newGoal.name
+            goal["colorIndex"] = newGoal.colorIndex
+            goal["resources"] = resources
+            goal.saveInBackground{ (success, error) in
+                        if success {
+                            print("Goal saved")
+                        } else {
+                            print("Error saving goal")
+                        }
+                    }
+            goals = user!["goals"] as! [PFObject]
+            goals.append(goal)
+            user!["goals"] = goals
+            user!.saveInBackground{ (success, error) in
+                        if success {
+                            print("user saved")
+                        } else {
+                            print("Error saving user")
+                        }
+                    }
             //print(newGoal.resources ?? "")
             do {
                 try context.save()
@@ -205,6 +230,11 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         var vidAuthor = channelIDs[tableView.indexPath(for: cell)!.row]
         var vidThumb = videoThumbnails[tableView.indexPath(for: cell)!.row]
         var newString = vidID + "~" + vidTitle + "~" + vidAuthor + "~" + vidThumb + "^"
+        let resource = PFObject(className: "Resource")
+        resource["author"] = vidAuthor
+        resource["thubmnail"] = vidThumb
+        resource["id"] = vidID
+        resources.append(resource)
         savedResources += newString
         //savedResources.append(newString)
         //savedResources.append(<#T##self: &String##String#>)
