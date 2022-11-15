@@ -130,12 +130,21 @@ We used Figma to design! It can be found [here](https://www.figma.com/file/YCyic
 ## Schema 
 ### Models
 #### Folder 
+<img src="https://i.imgur.com/K2Pipck.jpg" width=576>
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | username      | String   | username of the account holder |
-   | uniqueId      | String   | unique Id of each task created |
-   | notes         | String   | additional notes for a task added to folder |
+   | dayJoined      | String   | date the user joined EZlearn |
+   | email      | String   | email of the user |
+   | icon         | String   | url string of the user's icon |
+   | name         | String   | the user's full name |
+   | colorIndex         | Int 64   | the color index of a learning goal |
+   | completed         | Boolean   | boolean representation of task status |
+   | lName         | String   | learning goal name |
+   | resources         | String   | resources saved for each goal |
+
+   
+   
 ### Networking
 #### List of network requests by screen
    - Search Screen
