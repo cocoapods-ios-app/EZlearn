@@ -48,22 +48,22 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 - Resources can be saved to goals
 - Resources open in YouTube
 
-<img src='https://github.com/cocoapods-ios-app/EZlearn/blob/main/EZlearn-UserStory3.gif' width='340' alt='Video Walkthrough' />
+<img src='https://github.com/cocoapods-ios-app/EZlearn/blob/main/EZlearn-UserStory3.gif' width='250' alt='Video Walkthrough' />
 <br />
 
 
 ### Milestone Two Demo
-- A list of resources fitting the user's goal
-- Resources are pulled from the YouTube API
+- Custom resources are generated
+- Resources are pulled from YouTube
 
-<img src='https://github.com/cocoapods-ios-app/EZlearn/blob/main/EZlearn-UserStory2.gif' width='340' alt='Video Walkthrough' />
+<img src='https://github.com/cocoapods-ios-app/EZlearn/blob/main/EZlearn-UserStory2.gif' width='250' alt='Video Walkthrough' />
 <br />
 
 ### Milestone One Demo
 - The overall EZ interface is shown
 - Goals are able to be saved
 
-<img src='https://github.com/cocoapods-ios-app/EZlearn/blob/main/EZlearn_UserStory1.gif' width='340' alt='Video Walkthrough' />
+<img src='https://github.com/cocoapods-ios-app/EZlearn/blob/main/EZlearn_UserStory1.gif' width='250' alt='Video Walkthrough' />
 <br />
 
 
@@ -84,7 +84,7 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 
 **Flow Navigation** (Screen to Screen)
 
-<img src="https://i.imgur.com/Npl5JXQ.jpg" width=576>
+<img src="https://i.imgur.com/Npl5JXQ.jpg" width=475>
 
 - Welcome Scren (Starting Screen)
     - Login
@@ -114,23 +114,24 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 
 ## Wireframes
 ### Design 3:
-<img src="https://i.imgur.com/m3g8Qd0.jpg" width=576>
+<img src="https://i.imgur.com/m3g8Qd0.jpg" width=475>
 
 ### Design 2:
-![](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=576&height=569)
+<img src="https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg" width=475>
+
 ### Design 1:
-<img src="https://i.imgur.com/rVcGdsf.jpg" width=576>
+<img src="https://i.imgur.com/rVcGdsf.jpg" width=475>
 
 ### [BONUS] Interactive Prototype
 We used Figma to design! It can be found [here](https://www.figma.com/file/YCyicA0DuhLDIQgwWVLsGE/EZlearn?node-id=0%3A1&t=lAL3swhgrcTNVAac-1).
 
-<img src="https://i.imgur.com/1paoc4Q.gif" width=340>
+<img src="https://i.imgur.com/1paoc4Q.gif" width=250>
 
 
 ## Schema 
 ### Models
 #### Folder 
-<img src="https://i.imgur.com/K2Pipck.jpg" width=576>
+<img src="https://i.imgur.com/K2Pipck.jpg" width=475>
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
