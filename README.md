@@ -83,6 +83,9 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
    * Allowing users to create accounts to store their resources and access from any other IOS devices
 
 **Flow Navigation** (Screen to Screen)
+
+<img src="https://i.imgur.com/Npl5JXQ.jpg" width=576>
+
 - Welcome Scren (Starting Screen)
     - Login
     - Sign Up
