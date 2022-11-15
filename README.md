@@ -13,7 +13,7 @@ Original App Design Project - README Template
 ### Description
 Stop looking for good resources. Let EZlearn find them.
 
-Anyone seeking to learn a new skill, concept, or subject is the typical user. This person has a goal to learn something but does not have the time to find the resources online or does not know how to find them. Just by typing the name of a subject, or skill, or concept, the person has access to videos, articles, and links to learn. This person then select the videos and links he wants from the list and the app creates a folder for that person with all the saved links, videos and articles. This person can access that folder at anytime. 
+Anyone seeking to learn a new skill, concept, or subject is the typical user. This person has a goal to learn something but does not have the time to find the resources online or does not know how to find them. Just by typing the name of a subject, or skill, or concept, the person has access to videos to learn. This person then select the videos he wants from the list and the app creates a goal for that person with all the saved resources. This person can access these goals at anytime. 
 
 ### App Evaluation
 - **Category:** Productivity
@@ -41,26 +41,30 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 * User can share their learning goals together
 * User can contribute to other users' public learning goals
 
+<br />
+
 ### Milestone Three Demo
 - User can change the color of a goal
 - Resources can be saved to goals
 - Resources open in YouTube
 
 <img src='https://github.com/cocoapods-ios-app/EZlearn/blob/main/EZlearn-UserStory3.gif' width='340' alt='Video Walkthrough' />
+<br />
+
 
 ### Milestone Two Demo
 - A list of resources fitting the user's goal
 - Resources are pulled from the YouTube API
 
 <img src='https://github.com/cocoapods-ios-app/EZlearn/blob/main/EZlearn-UserStory2.gif' width='340' alt='Video Walkthrough' />
-
+<br />
 
 ### Milestone One Demo
 - The overall EZ interface is shown
 - Goals are able to be saved
 
 <img src='https://github.com/cocoapods-ios-app/EZlearn/blob/main/EZlearn_UserStory1.gif' width='340' alt='Video Walkthrough' />
-
+<br />
 
 
 ### 2. Screen Archetypes
@@ -82,6 +86,9 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 
 
 ## Wireframes
+### Design 3:
+<img src="https://i.imgur.com/m3g8Qd0.jpg" width=576>
+
 ### Design 2:
 ![](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=576&height=569)
 ### Design 1:
