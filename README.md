@@ -83,6 +83,30 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
    * Allowing users to create accounts to store their resources and access from any other IOS devices
 
 **Flow Navigation** (Screen to Screen)
+- Welcome Scren (Starting Screen)
+    - Login
+    - Sign Up
+- Login Screen
+    - Welcome Screen
+    - Home Screen
+    - Sign Up Screen
+- Create Account Screen
+    - Welcome Screen
+    - Home Screen
+- Home Screen
+    - Task View
+    - Add Task
+    - Profile
+    - Settings
+- Task View
+    - Home Screen
+- Add Task
+    - Home Screen
+- Settings
+    - Home Screen
+- Profile Screen
+    - Home Screen
+    - Welcome Screen
 
 
 ## Wireframes
@@ -93,10 +117,14 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 ![](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=576&height=569)
 ### Design 1:
 <img src="https://i.imgur.com/rVcGdsf.jpg" width=576>
+
 ### [BONUS] Interactive Prototype
+We used Figma to design! It can be found [here](https://www.figma.com/file/YCyicA0DuhLDIQgwWVLsGE/EZlearn?node-id=0%3A1&t=lAL3swhgrcTNVAac-1).
+
+<img src="https://i.imgur.com/1paoc4Q.gif" width=340>
+
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 #### Folder 
 
