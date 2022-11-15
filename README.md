@@ -38,40 +38,28 @@ Anyone seeking to learn a new skill, concept, or subject is the typical user. Th
 * [ ] User can contribute to other users' public learning goals
 
 ### 2. Screen Archetypes
-
-<img src="https://i.imgur.com/nIhADim.png" height=500>
    * Allowing users to have multiple folders
    * Allowing users to create new folders
-
-<img src="https://i.imgur.com/99XC3WM.png" height=500>
    * Overview of a folder's homescreen
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-<img src="https://i.imgur.com/nIhADim.png" height=500>
    * User's homescreen 
  
-<img src="https://i.imgur.com/ipDMugu.png" height=500>
    * Allowing users to search for studying resources and add them to their respective folders
  
-<img src="https://i.imgur.com/RD6Uque.png" height=500>
    * Allowing users to create accounts to store their resources and access from any other IOS devices
 
 **Flow Navigation** (Screen to Screen)
 
-* <img src="https://i.imgur.com/nIhADim.png" height=200>
-   * <img src="https://i.imgur.com/QAtuVsB.png" height=200>
-   * <img src="https://i.imgur.com/pIBzvjh.png" height=200>
-   * <img src="https://i.imgur.com/pjgGC9t.png" height=200>
-   * 
 
 ## Wireframes
-
+### Design 2:
 ![](https://media.discordapp.net/attachments/1028838792636923974/1030690471137251368/IMG_2027.jpg?width=576&height=569)
-
-
+### Design 1:
+<img src="https://i.imgur.com/rVcGdsf.jpg" width=576>
 ### [BONUS] Interactive Prototype
 
 ## Schema 
