@@ -66,6 +66,27 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             newGoal.colorIndex = Int64(selectedColor)
             newGoal.resources = savedResources
             newGoal.completed = false
+            goal["name"] = newGoal.name
+            goal["colorIndex"] = newGoal.colorIndex
+            goal["resources"] = resources
+//            goal["completed"] = false
+            goal.saveInBackground{ (success, error) in
+                        if success {
+                            print("Goal saved")
+                        } else {
+                            print("Error saving goal")
+                        }
+                    }
+            goals = user!["goals"] as! [PFObject]
+            goals.append(goal)
+            user!["goals"] = goals
+            user!.saveInBackground{ (success, error) in
+                        if success {
+                            print("user saved")
+                        } else {
+                            print("Error saving user")
+                        }
+                    }
             //print(newGoal.resources ?? "")
             do {
                 try context.save()
