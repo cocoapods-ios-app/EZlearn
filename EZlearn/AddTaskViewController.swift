@@ -65,7 +65,9 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             newGoal.name = taskField.text
             newGoal.colorIndex = Int64(selectedColor)
             newGoal.resources = savedResources
+<<<<<<< Updated upstream
             newGoal.completed = false
+=======
             goal["name"] = newGoal.name
             goal["colorIndex"] = newGoal.colorIndex
             goal["resources"] = resources
@@ -87,6 +89,7 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
                             print("Error saving user")
                         }
                     }
+>>>>>>> Stashed changes
             //print(newGoal.resources ?? "")
             do {
                 try context.save()
