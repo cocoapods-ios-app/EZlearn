@@ -54,7 +54,7 @@ class TaskTableViewCell: UITableViewCell {
     func setCompleted(_ isComplete:Bool) {
         complete = isComplete
         if (complete) {
-            completeTask.setImage(UIImage(systemName: "circle.inset.filled"), for: UIControl.State.normal)
+            completeTask.setImage(UIImage(systemName: "checkmark.circle"), for: UIControl.State.normal)
 //            completeTask.isEnabled = true
         } else {
             completeTask.setImage(UIImage(systemName: "circle"), for: UIControl.State.normal)
@@ -62,15 +62,16 @@ class TaskTableViewCell: UITableViewCell {
     }
     
     func saveCompleteTask(completed: Bool, name: String) {
-        var appDelegate = UIApplication.shared.delegate as! AppDelegate
-        var context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         
-        var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LearningGoal")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LearningGoal")
         fetchRequest.predicate = NSPredicate(format: "name = %@", name)
         
         do {
             let results = try context.fetch(fetchRequest) as? [NSManagedObject]
             if results?.count != 0 { // Atleast one was returned
+
                 // In my case, I only updated the first item in results
                 results?[0].setValue(completed, forKey: "completed")
             }

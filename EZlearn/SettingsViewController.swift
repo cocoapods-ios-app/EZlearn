@@ -6,13 +6,11 @@
 //
 
 import UIKit
-import CoreData
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     var cellReuseIdentifier = "settCell"
-    var countCompleted:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +26,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let theCell:SettingsTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! SettingsTableViewCell
-        retrieveCompletedTask()
         /*
         print("Count: " + String(tasks.count))
         print(indexPath.row)
@@ -50,7 +47,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             theCell.settingValueLabel.text = ">"
         case 4:
             theCell.settingNameLabel.text = "Completed Tasks"
-            theCell.settingValueLabel.text = ">" + String(countCompleted)
+            theCell.settingValueLabel.text = ">"
         case 5:
             theCell.settingNameLabel.text = "Credits"
             theCell.settingValueLabel.text = ">"
@@ -86,25 +83,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             print("SettingsViewController: Cell Overload")
         }*/
 
-    }
-    func retrieveCompletedTask() {
-        countCompleted = 0
-        var appDelegate = UIApplication.shared.delegate as! AppDelegate
-        var context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-        
-        var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LearningGoal")
-        
-        
-        do {
-            let results = try context.fetch(fetchRequest) as! [NSManagedObject]
-            for result in results {
-                if (result.value(forKey: "completed") as! Bool? == true) {
-                    countCompleted += 1
-                }
-            }
-        } catch {
-            print("Fetch Failed: \(error)")
-        }
     }
     
 

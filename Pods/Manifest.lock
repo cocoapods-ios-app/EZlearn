@@ -1,4 +1,8 @@
 PODS:
+  - Alamofire (4.9.1)
+  - AlamofireImage (3.6.0):
+    - Alamofire (~> 4.9)
+  - Bolts/Tasks (1.9.1)
   - Firebase/Auth (3.17.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.1)
@@ -47,8 +51,14 @@ PODS:
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
   - lottie-ios (2.5.3)
+  - Parse (1.19.1):
+    - Parse/Core (= 1.19.1)
+  - Parse/Core (1.19.1):
+    - Bolts/Tasks (= 1.9.1)
+  - RNCryptor (5.1.0)
 
 DEPENDENCIES:
+  - AlamofireImage
   - Firebase/Auth
   - Firebase/Core
   - FirebaseAuth
@@ -56,9 +66,14 @@ DEPENDENCIES:
   - GoogleAPIClientForREST/YouTube (~> 1.2.1)
   - GoogleSignIn
   - lottie-ios
+  - Parse
+  - RNCryptor
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - AlamofireImage
+    - Bolts
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -70,8 +85,13 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - lottie-ios
+    - Parse
+    - RNCryptor
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
@@ -83,7 +103,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 800648f8b3127618c1b59c7f97684427630c5ea3
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  Parse: e40fdb9c7d665823b7fe9865949cac9a53eb2ce7
+  RNCryptor: a369134686cd2ad391323cc856b62e591193ba79
 
-PODFILE CHECKSUM: 173a66401a406ec087433d6ddb0e59c033509222
+PODFILE CHECKSUM: 1118a810382ba0ebf297cad3704ac64a9fbeba61
 
 COCOAPODS: 1.11.3

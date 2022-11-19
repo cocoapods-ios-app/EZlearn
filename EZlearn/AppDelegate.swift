@@ -58,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 import GoogleSignIn
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -76,10 +77,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    /*
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
 
+        // --- Copy this only
+        
+        let parseConfig = ParseClientConfiguration {
+                $0.applicationId = "RpK4BMepTRL7H0EdKR0rwXzT1oMakThQRwCDI1A2" // <- UPDATE
+                $0.clientKey = "biZg2JTyeqWpnreB2cMaRn8jIPyAcgNIZWhb9u20" // <- UPDATE
+                $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: parseConfig)
+        
+        // --- end copy
+
+
+        return true
+    }
+*/
     func applicationDidFinishLaunching(_ application: UIApplication) {
         // Initialize Google sign-in.
         GIDSignIn.sharedInstance().clientID = "137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com"
+        
+        
+        
+        let parseConfig = ParseClientConfiguration {
+                $0.applicationId = "RpK4BMepTRL7H0EdKR0rwXzT1oMakThQRwCDI1A2" // <- UPDATE
+                $0.clientKey = "biZg2JTyeqWpnreB2cMaRn8jIPyAcgNIZWhb9u20" // <- UPDATE
+                $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: parseConfig)
     }
 
     func application(_ application: UIApplication,

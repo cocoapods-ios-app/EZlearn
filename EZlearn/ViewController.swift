@@ -6,6 +6,9 @@
 //
 import UIKit
 import CoreData
+import CommonCrypto
+import BSONSerialization
+import Parse
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIBarPositioningDelegate, UINavigationBarDelegate {
     
@@ -22,6 +25,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var cellSelection : LearningGoal!
     var cellSelectionColor = UIColor.black
     var taskToDelete = ""
+    var signedInPf : Any!
+
     
     @IBOutlet weak var helloLabel: UITextField!
     var usersName = "User"
@@ -35,6 +40,67 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         helloLabel.text = "Hello " + usersName
         helloLabel.font = UIFont.systemFont(ofSize: 30)
+        
+        /*
+        print(self.inputViewController)
+        print(self.splitViewController)
+        print(self.presentedViewController)
+        print(self.presentingViewController)
+        print(self.childViewControllerForPointerLock)
+        */
+        //var secureData =
+        do {
+            
+            /*
+            //print(Data(str.utf8))
+            //secureData
+            //print(String(format: "%02X", secureData as CVarArg))
+
+            let s2 = secureData.base64EncodedString()        // very similar to C
+            //var s3 = s2.toBase64()
+            //var backToS2 = s3.fromBase64()
+            //var backToOrigData = (backToS2?.data(using: .utf8))!
+            //let unserializedBSONDoc = try! JSONSerialization.jsonObject(with: backToOrigData, options: []) as! NSDictionary
+            let unserializedBSONDoc = try JSONSerialization.jsonObject(with: s2.data(using: .utf8)!)
+            print(unserializedBSONDoc)
+
+
+
+*/
+            /*
+            var str2 = str.toBase64()
+            var asObject = signedInPf as! PFObject
+            asObject["data"] = str2
+            var str3 = str2.fromBase64()
+            if let decodedData = Data(base64Encoded: str3!) {
+                var decodedString = String(data: decodedData, encoding: .utf8)!
+                print(decodedString)
+                let unserializedBSONDoc = try JSONSerialization.jsonObject(with: decodedString.data(using: .utf8)!)
+                print(unserializedBSONDoc)
+            }*/
+            //var decodedString = s3.fromBase64()
+            /*
+            var newData = s2.data(using: .utf8)!
+
+            if let decodedData = Data(base64Encoded: s3.fromBase64()!) {
+                var decodedString = String(data: decodedData, encoding: .utf8)!
+                let unserializedBSONDoc = try JSONSerialization.jsonObject(with: decodedString)
+                print(unserializedBSONDoc)
+            }*/
+            
+            /*
+            if let decodedData = Data(base64Encoded: str) {
+                var decodedString = String(data: decodedData, encoding: .utf8)!
+                print(decodedString)
+                //let unserializedBSONDoc = try JSONSerialization.jsonObject(with: decodedString.data(using: .utf8)!)
+                print(unserializedBSONDoc)
+            }*/
+        } catch {
+            
+        }
+        //BSONSerialization.da
+        
+        //((self.presentingViewController as? UINavigationController)?.viewControllers[1] as? SignInViewController)!.newUser.value(forKey: "First")
         
         
         /*
@@ -72,6 +138,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             firstLoad = false
             appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+            
+            //var myNS = NSCoder()
+            //var theEncoded = context.encode(with: myNS)
+            //context.
+            
+            //print(myNS.decodeObject())
+            //context.encode(with: <#T##NSCoder#>)
+            //NSCoder.encode
+            //NSCoder.encode(<#T##self: NSCoder##NSCoder#>)
+            //print(NSCoder)
+            //encr
+            
+
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "LearningGoal")
             do {
                 let results:NSArray = try context.fetch(request) as NSArray
@@ -128,7 +207,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func deleteTask(goal: LearningGoal) {
         // Delete from CoreData
         //print("im here")
-        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "LearningGoal")
         do {
             let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
@@ -152,11 +231,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let data = UserDefaults.standard.object(forKey:"usersTasks") as? Data,
-           let category = try? JSONDecoder().decode(UserTask.self, from: data) {
-             //print(category.name)
-        }
-        //print("DID I RUN FIRST LETS SEEEEE")
         return tasks.count
     }
     
@@ -166,7 +240,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //print(indexPath.row)
         cell.taskName.text = tasks[indexPath.item].name
         cell.goalCell.backgroundColor = hexStringToUIColor(hex: cellColors[Int(tasks[indexPath.item].colorIndex)])
-        
         cell.setCompleted(tasks[indexPath.item].completed)
         
         return cell

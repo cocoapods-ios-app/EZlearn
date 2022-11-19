@@ -12,6 +12,7 @@ import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
 import CoreData
+import Parse
 
 class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
@@ -46,6 +47,8 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDel
             )
             newToLabel.setAttributedTitle(attributeString, for: .normal)
             
+        
+        
             //signInButton.backgroundColor = UIColor.init(red: 0, green: 0, blue: 15/255, alpha: 1)
             
             
@@ -62,7 +65,6 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDel
             animationView.animation = LottieAnimation.named("87271-atom-cascade-loader")
             
             //LottieAnimation.named("28893-book-loading")
-            print(animationView.animation ?? "nothing found")
             animationView.frame = containerView.bounds
             containerView.backgroundColor = .clear
             animationView.center = containerView.center
@@ -81,12 +83,11 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDel
         //signInButton.center = CGPoint(x: view.center.x, y: 600)
     }
     override func viewWillAppear(_ animated: Bool) {
-        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         do {
             let results:NSArray = try context.fetch(request) as NSArray
-            print(results)
             for result in results
             {
                 theUser = (result as! User).name!
@@ -94,15 +95,83 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDel
         } catch {
             print("Fetch Failed")
         }
-                
-        
         if (theUser.isEmpty) {
             playAnimation()
-            print("no log in sorry")
         } else {
-            GIDSignIn.sharedInstance().signIn()
             
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
+            let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "homeNav") as! UINavigationController
+            vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+            let homeView = (vc.viewControllers[0] as! ViewController)
+            /*
+            let splitName = fullName?.components(separatedBy: " ")
+
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+            let newUser = User(entity: entity!, insertInto: context)
+            newUser.name = fullName
+            newUser.email = emailAddress
+            newUser.icon = profilePicUrl?.absoluteString
+            
+            let dateComponents = (NSDate().description.components(separatedBy: " ")[0]).components(separatedBy: "-")
+            var month = ""
+            switch dateComponents[1] {
+            case "1":
+                month = "January"
+            case "2":
+                month = "February"
+            case "3":
+                month = "March"
+            case "4":
+                month = "April"
+            case "5":
+                month = "May"
+            case "6":
+                month = "June"
+            case "7":
+                month = "July"
+            case "8":
+                month = "August"
+            case "9":
+                month = "September"
+            case "10":
+                month = "October"
+            case "11":
+                month = "November"
+            case "12":
+                month = "December"
+            default:
+                print("Month not found")
+            }
+
+            let dayAsInteger = Int(dateComponents[2])
+            var dayPrefix = ""
+            switch dayAsInteger {
+                case 1, 21, 31:
+                    dayPrefix = "st"
+                case 2, 22:
+                    dayPrefix = "nd"
+                case 3, 23:
+                    dayPrefix = "rd"
+                default:
+                    dayPrefix = "th"
+            }
+            
+            let learningDate = month + " " + dateComponents[2] + dayPrefix + ", " + dateComponents[0]
+            newUser.dayJoined = learningDate
+            do {
+                try context.save()
+            } catch {
+                print("context save error")
+                
+            }
+*/
+
+            self.present(vc, animated: true, completion: nil)
+            
+            homeView.usersName = theUser
         }
     }
     
@@ -120,54 +189,201 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDel
             showAlert(title: "Authentication Error", message: error.localizedDescription)
             self.service.authorizer = nil
         } else {
-            signedIn = true
+            // Check if they've ever signed in through Google before
+            //var outsideUser : PFObject!
+            var learningDate = ""
+            var splitName = [String]()
+            let query = PFQuery(className: "GoogleUser")
+            query.whereKey("email", equalTo:user.profile.email ?? "")
+            query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+                if let error = error {
+                    // Log details of the failure
+                    print(error.localizedDescription)
+                } else if let objects = objects {
+                    // The find succeeded.
+                    if (objects.count == 0) {
+                        // Make a new google user
+                        print("making a new google user")
+                        let newGoogleUser = PFObject(className:"GoogleUser")
+                        newGoogleUser["email"] = user.profile.email
+                        newGoogleUser["name"] = user.profile.name
+                        newGoogleUser["icon"] = user.profile?.imageURL(withDimension: 320).absoluteString
+                        let dateAsString = Date().description(with: .current)
+                        let firstSpace = dateAsString.firstIndex(of: " ")!
+                        let theRange = dateAsString.range(of: " at")
+                        var finalDate = dateAsString[firstSpace..<theRange!.lowerBound]
+                        finalDate = finalDate.dropFirst()
+                        let dateComponents = finalDate.components(separatedBy: " ")
+                        let dayAsInteger = Int(dateComponents[1])
+                        var dayPrefix = ""
+                        switch dayAsInteger {
+                            case 1, 21, 31:
+                             dayPrefix = "st"
+                            case 2, 22:
+                             dayPrefix = "nd"
+                            case 3, 23:
+                             dayPrefix = "rd"
+                            default:
+                             dayPrefix = "th"
+                        }
+                        
+                        
+                        learningDate = String(finalDate).replacingOccurrences(of: ",", with: dayPrefix + ",")
+                        newGoogleUser["dayJoined"] = learningDate
+                        newGoogleUser.saveInBackground { (succeeded, error)  in
+                            if (succeeded) {
+                                // The object has been saved.
+                            } else {
+                                // There was a problem, check error.description
+                            }
+                        }
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+                        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+                        let newUser = User(entity: entity!, insertInto: context)
+                        
+                        
+                        var fullName = user.profile.name!
+                        var emailAddress = user.profile.email
+                        var profilePicUrl = user.profile?.imageURL(withDimension: 320).absoluteString
+                        splitName = fullName.components(separatedBy: " ")
 
-            //self.signInButton.isHidden = true
-            //self.output.isHidden = false
-            self.service.authorizer = user.authentication.fetcherAuthorizer()
-            let emailAddress = user.profile?.email
+                        
+                        newUser.name = fullName
+                        newUser.email = emailAddress
+                        newUser.icon = profilePicUrl
+                        print("this was saved")
+                        print(learningDate)
+                        newUser.dayJoined = learningDate
+                        
+                        
+                        
+                        do {
+                            try context.save()
+                        } catch {
+                            print("context save error")
+                            
+                        }
+                        
+                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "homeNav") as! UINavigationController
+                        vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                        let homeView = (vc.viewControllers[0] as! ViewController)
+                        self.present(vc, animated: true, completion: nil)
+                        homeView.usersName = splitName[0]
+                        
+                    } else {
+                        // Get the google user and the data
+                        var userAsObject = objects[objects.count - 1]
+                        learningDate = userAsObject["dayJoined"] as! String
+                        //print(userAsObject["dayJoined"])
+                        // Decode the JSON here
+                        
+                        
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+                        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+                        let newUser = User(entity: entity!, insertInto: context)
+                        
+                        
+                        var fullName = user.profile.name!
+                        var emailAddress = user.profile.email
+                        var profilePicUrl = user.profile?.imageURL(withDimension: 320).absoluteString
+                        splitName = fullName.components(separatedBy: " ")
 
-            let fullName = user.profile?.name
-            //let givenName = user.profile?.givenName
-            //let familyName = user.profile?.familyName
+                        
+                        newUser.name = fullName
+                        newUser.email = emailAddress
+                        newUser.icon = profilePicUrl
+                        newUser.dayJoined = learningDate
+                        
+                        
+                        
+                        
+                        
+                        do {
+                            try context.save()
+                        } catch {
+                            print("context save error")
+                            
+                        }
+                        
+                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "homeNav") as! UINavigationController
+                        vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                        let homeView = (vc.viewControllers[0] as! ViewController)
+                        self.present(vc, animated: true, completion: nil)
+                        homeView.usersName = splitName[0]
+                        
+                        var userData = userAsObject["data"] as! String
+                        userData = userData.fromBase64()!
+                        userData = userData.fromBase64()!
+                        do {
+                            
+                            let unserializedBSONDoc = try JSONSerialization.jsonObject(with: userData.data(using: .utf8)!) as! NSArray
+                            let theDict = unserializedBSONDoc[0] as! NSDictionary
+                            
+                            // Here begins decoding
+                            if let itemArray = theDict["learning goals"] as? NSArray {
+                                for case let item as NSDictionary in itemArray {
+                                    //var allTheKeys = item.allKeys
+                                    for (lGoal, settings) in item {
+                                        let arraySets = settings as? NSArray
+                                        let theVal = arraySets![0] as? NSDictionary
+                                        
+                                        // Insert to CoreData
+                                        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+                                        let entity = NSEntityDescription.entity(forEntityName: "LearningGoal", in: context)
+                                        let newGoal = LearningGoal(entity: entity!, insertInto: context)
+                                        
+                                        newGoal.name = lGoal as? String
+                                        newGoal.colorIndex = theVal?.value(forKey: "colorIndex") as! Int64
+                                        newGoal.resources = theVal?.value(forKey: "resources") as? String
+                                        newGoal.completed = theVal?.value(forKey: "completed") as! Bool
+                                        do {
+                                            try context.save()
+                                            let thevc = (self.presentingViewController as? UINavigationController)?.viewControllers[0] as? ViewController
+                                            thevc?.tasks.append(newGoal)
+                                            thevc?.tableView.reloadData()
+                                            //print(taskField.text ?? "Nada")
+                                        } catch {
+                                            print("context save error")
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            
+                        } catch {
+                            
+                        }
+                        //let unserializedBSONDoc = try JSONSerialization.jsonObject(with: s2.data(using: .utf8)!)
+                        
 
-            let profilePicUrl = user.profile?.imageURL(withDimension: 320)
-            //print(fullName)
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-
-            let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "homeNav") as! UINavigationController
-            vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-            print(vc.viewControllers)
-            let homeView = (vc.viewControllers[0] as! ViewController)
-            let splitName = fullName?.components(separatedBy: " ")
-
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-            let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
-            let newUser = User(entity: entity!, insertInto: context)
-            newUser.name = fullName
-            newUser.email = emailAddress
-            do {
-                try newUser.icon = String(contentsOf: (profilePicUrl)!)
-            } catch {
-                newUser.icon = ""
+                        /*
+                        print(userAsObject)
+                        print("HERE!!")
+                         */
+                        /*
+                            userAsObject["data"] = str2
+                            
+                            userAsObject.saveInBackground { (succeeded, error)  in
+                                if (succeeded) {
+                                    // The object has been saved.
+                                } else {
+                                    // There was a problem, check error.description
+                                }
+                            }*/
+                    }
+                }
             }
-            do {
-                try context.save()
-                print(newUser)
-            } catch {
-                print("context save error")
-                
-            }
-
-
-            self.present(vc, animated: true, completion: nil)
             
-            homeView.usersName = splitName?[0] ?? "User"
+            
+
+            
 
 
-
-            //fetchChannelResource()
         }
     }
     

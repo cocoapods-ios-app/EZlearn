@@ -29,8 +29,7 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
         theSelectedGoal = thevc?.cellSelection as? LearningGoal
         goalName.text = theSelectedGoal!.name
         
-        var appDelegate = UIApplication.shared.delegate as! AppDelegate
-       
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "LearningGoal")
         do {
@@ -44,12 +43,10 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
                     if !goalResources.isEmpty {
                         allResources = goalResources.components(separatedBy: "^")
                         allResources.remove(at: allResources.count - 1)
-                        
-                        for aResource in allResources  {
-                            //print("got here 3")
-                            self.checkmarks.append(false)
-                            //print(aResource)
+                        for _ in allResources {
+                            checkmarks.append(false)
                         }
+                       
                     }
                 }
                 //print(theGoal.name ?? "nothing here")
@@ -82,19 +79,24 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
         let cell:ResourceTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! ResourceTableViewCell
         //print(Array(goalResources)[indexPath.row].key)
 
-        var resourceInfo = allResources[indexPath.row].components(separatedBy: "~")
+        let resourceInfo = allResources[indexPath.row].components(separatedBy: "~")
         
         cell.videoTitleLabel.text = resourceInfo[1]
         //print("kwnfjen")
         //print(resourceInfo[2])
         cell.channelIDLabel.text = resourceInfo[3]
-        /*
-        if checkmarks[indexPath.row] {
+        var checkBool = false
+        if resourceInfo[4] == "true" {
+            checkBool = true
+        }
+        //var checkBool = resourceInfo[4] as! Bool
+        
+        if checkBool {
             cell.addResourceButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
         } else {
-            cell.addResourceButton.setImage(UIImage(systemName: "plus"), for: .normal)
+            cell.addResourceButton.setImage(UIImage(systemName: "circle"), for: .normal)
             
-        }*/
+        }
         
         if let url = URL(string: (resourceInfo[3])) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -113,7 +115,7 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
         /**
          This code is from https://stackoverflow.com/questions/41542409/how-to-open-youtube-app-with-youtube-id-on-a-button-click-in-ios
          */
-        var resourceInfo = allResources[indexPath.row].components(separatedBy: "~")
+        let resourceInfo = allResources[indexPath.row].components(separatedBy: "~")
         
         let youtubeId = resourceInfo[0]
         //var youtubeUrl = NSURL(string: "https://www.youtube.com/watch?v=\(videoIds[indexPath.row])")
@@ -144,8 +146,70 @@ class OpenTaskViewController: UIViewController, UITableViewDelegate, UITableView
         guard let cell = sender.superview?.superview as? ResourceTableViewCell else {
             return // or fatalError() or whatever
         }
+        //var nameOfGoal = cell.
         checkmarks[tableView.indexPath(for: cell)!.row] = true
-        //print("hi")
+        var theIntegerInvolved = tableView.indexPath(for: cell)!.row + 1
+        //3 * theIntegerInvolved - 1
+        //theIntegerInvolved
+        //title~author~url~completed^title~author~url~completed
+        
+        /**
+         Code is from https://stackoverflow.com/questions/39358798/find-index-of-nth-instance-of-substring-in-string-in-swift
+         */
+        
+        // Find the ~ before the completion
+        var query = "~"
+        var searchRange = goalResources.startIndex..<goalResources.endIndex
+        var indices: [String.Index] = []
+
+        while let range = goalResources.range(of: query, options: .caseInsensitive, range: searchRange) {
+            searchRange = range.upperBound..<searchRange.upperBound
+            indices.append(range.lowerBound)
+        }
+        
+        // Find the ^ after the completion
+        query = "^"
+        searchRange = goalResources.startIndex..<goalResources.endIndex
+        var indices2: [String.Index] = []
+
+        while let range = goalResources.range(of: query, options: .caseInsensitive, range: searchRange) {
+            searchRange = range.upperBound..<searchRange.upperBound
+            indices2.append(range.lowerBound)
+        }
+        
+        // Change the resource string
+        var indexFirstLetter = indices[4 * theIntegerInvolved - 1]
+        var indexLastLetter = indices2[theIntegerInvolved - 1]
+        var firstPart = goalResources[...indexFirstLetter]
+        firstPart += "true"
+        firstPart += goalResources[indexLastLetter...]
+        print(firstPart)
+        
+        
+        //title~author~thumbnail~completed^title~author~thumbnail~completed
+        // vidID + "~" + vidTitle + "~" + vidAuthor + "~" + vidThumb + "~" + "false" + "^"
+
+        
+        // Make sure the new resource string is saved on the learning goal
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let request = NSFetchRequest<NSFetchRequestResult>(entityName: "LearningGoal")
+                do {
+                    let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+
+                    let results:NSArray = try context.fetch(request) as NSArray
+                    for result in results {
+                        let theGoal = result as! LearningGoal
+                        if(theGoal.name == goalName.text) {
+                            theGoal.resources = String(firstPart)
+                            //theGoal.name = "I was changed"
+                            try context.save()
+                        }
+                    }
+                } catch {
+
+                    print("Fetch Failed")
+                }
+         
     }
     
     

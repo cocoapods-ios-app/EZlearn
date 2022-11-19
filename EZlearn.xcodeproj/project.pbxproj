@@ -8,14 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		A110592629199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A110592429199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld */; };
+		A11BAEFB2922050700E3F7DF /* AuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BAEFA2922050700E3F7DF /* AuthDelegate.swift */; };
+		A11BAEFE29223A9F00E3F7DF /* BSONSerialization in Frameworks */ = {isa = PBXBuildFile; productRef = A11BAEFD29223A9F00E3F7DF /* BSONSerialization */; };
 		A12494EC291EA8C400069037 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12494EB291EA8C400069037 /* WelcomeViewController.swift */; };
 		A12494EE291EAB5A00069037 /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = A12494ED291EAB5A00069037 /* book.json */; };
 		A12494F1291EB00900069037 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A12494F0291EB00900069037 /* Lottie */; };
 		A12494F3291EB3A300069037 /* 28893-book-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = A12494F2291EB3A300069037 /* 28893-book-loading.json */; };
 		A12494F5291EB44A00069037 /* 87271-atom-cascade-loader.json in Resources */ = {isa = PBXBuildFile; fileRef = A12494F4291EB44A00069037 /* 87271-atom-cascade-loader.json */; };
+		A12C305C2921ED1E00D8BEC8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C305B2921ED1E00D8BEC8 /* StringExtension.swift */; };
+		A12C305E2921F94100D8BEC8 /* FieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C305D2921F94100D8BEC8 /* FieldExtension.swift */; };
+		A1434426292096FF007AB772 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434425292096FF007AB772 /* SignUpViewController.swift */; };
+		A14344282920972B007AB772 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14344272920972B007AB772 /* SignInViewController.swift */; };
 		A16B0884291EBE7B00C9F19A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A16B0883291EBE7A00C9F19A /* GoogleService-Info.plist */; };
 		A18650A0291ADFEE0090AEA9 /* OpenTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A186509F291ADFEE0090AEA9 /* OpenTaskViewController.swift */; };
 		A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0BD7A2916192300E69F4B /* Constants.swift */; };
+		A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
+		A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
+		A1A0BD7F291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
 		A1A8AC5C291FD57C0017BD5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8AC5B291FD57C0017BD5B /* SettingsViewController.swift */; };
 		A1A8AC5E291FDA0B0017BD5B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8AC5D291FDA0B0017BD5B /* SettingsTableViewCell.swift */; };
 		A1A8AC60291FE75B0017BD5B /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1A8AC5F291FE75A0017BD5B /* Montserrat-Regular.ttf */; };
@@ -37,7 +46,7 @@
 		A1E02318290DA9E0001A2B12 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */; };
 		A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E02319290DD63B001A2B12 /* UserTask.swift */; };
 		A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */; };
-		E4CD986529204B03005ACF34 /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CD986429204B03005ACF34 /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */; };
+		A1F7B55A29212A3800446474 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F7B55929212A3800446474 /* Security.framework */; };
 		F0EF7FAB14C943A73D22E221 /* Pods_EZlearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506B022C6C98E893054BECEC /* Pods_EZlearn.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,13 +71,19 @@
 		506B022C6C98E893054BECEC /* Pods_EZlearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZlearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C67D3702A5C97AEDFA5BDFF /* Pods-EZlearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZlearn.release.xcconfig"; path = "Target Support Files/Pods-EZlearn/Pods-EZlearn.release.xcconfig"; sourceTree = "<group>"; };
 		A110592529199E3A007BD9A2 /* EZdata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EZdata.xcdatamodel; sourceTree = "<group>"; };
+		A11BAEFA2922050700E3F7DF /* AuthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDelegate.swift; sourceTree = "<group>"; };
 		A12494EB291EA8C400069037 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A12494ED291EAB5A00069037 /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
 		A12494F2291EB3A300069037 /* 28893-book-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "28893-book-loading.json"; sourceTree = "<group>"; };
 		A12494F4291EB44A00069037 /* 87271-atom-cascade-loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "87271-atom-cascade-loader.json"; sourceTree = "<group>"; };
+		A12C305B2921ED1E00D8BEC8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		A12C305D2921F94100D8BEC8 /* FieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldExtension.swift; sourceTree = "<group>"; };
+		A1434425292096FF007AB772 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A14344272920972B007AB772 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A16B0883291EBE7A00C9F19A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A186509F291ADFEE0090AEA9 /* OpenTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTaskViewController.swift; sourceTree = "<group>"; };
 		A1A0BD7A2916192300E69F4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; path = "../../Downloads/client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		A1A8AC5B291FD57C0017BD5B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A1A8AC5D291FDA0B0017BD5B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		A1A8AC5F291FE75A0017BD5B /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -94,9 +109,9 @@
 		A1E02317290DA9E0001A2B12 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		A1E02319290DD63B001A2B12 /* UserTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTask.swift; sourceTree = "<group>"; };
 		A1F0651E290F5F1900A66163 /* HomeNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavViewController.swift; sourceTree = "<group>"; };
+		A1F7B55929212A3800446474 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A1FCBFFF2916D8A200530724 /* libGoogleAPIClientForREST.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleAPIClientForREST.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E9E7811EAAAC2B4C9BAE2A /* Pods-EZlearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZlearn.debug.xcconfig"; path = "Target Support Files/Pods-EZlearn/Pods-EZlearn.debug.xcconfig"; sourceTree = "<group>"; };
-		E4CD986429204B03005ACF34 /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; path = "../../../../CodePath IOS/EZlearn/client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F7B55A29212A3800446474 /* Security.framework in Frameworks */,
+				A11BAEFE29223A9F00E3F7DF /* BSONSerialization in Frameworks */,
 				F0EF7FAB14C943A73D22E221 /* Pods_EZlearn.framework in Frameworks */,
 				A12494F1291EB00900069037 /* Lottie in Frameworks */,
 			);
@@ -138,6 +155,7 @@
 		A1E022D9290CD30B001A2B12 = {
 			isa = PBXGroup;
 			children = (
+				A1A0BD7C291623D200E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */,
 				A1E022E4290CD30B001A2B12 /* EZlearn */,
 				A1E022FB290CD30E001A2B12 /* EZlearnTests */,
 				A1E02305290CD30E001A2B12 /* EZlearnUITests */,
@@ -160,7 +178,6 @@
 		A1E022E4290CD30B001A2B12 /* EZlearn */ = {
 			isa = PBXGroup;
 			children = (
-				E4CD986429204B03005ACF34 /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist */,
 				A1A8AC61291FE7B90017BD5B /* Montserrat-Medium.ttf */,
 				A1A8AC5F291FE75A0017BD5B /* Montserrat-Regular.ttf */,
 				A16B0883291EBE7A00C9F19A /* GoogleService-Info.plist */,
@@ -171,6 +188,8 @@
 				A1E022E7290CD30B001A2B12 /* SceneDelegate.swift */,
 				A1E022E9290CD30B001A2B12 /* ViewController.swift */,
 				A1E022EB290CD30B001A2B12 /* Main.storyboard */,
+				A14344272920972B007AB772 /* SignInViewController.swift */,
+				A1434425292096FF007AB772 /* SignUpViewController.swift */,
 				A1A8AC5D291FDA0B0017BD5B /* SettingsTableViewCell.swift */,
 				A1A8AC63291FE9770017BD5B /* SourceSansPro-Light.otf */,
 				A186509F291ADFEE0090AEA9 /* OpenTaskViewController.swift */,
@@ -188,6 +207,9 @@
 				A12494EB291EA8C400069037 /* WelcomeViewController.swift */,
 				A1A8AC5B291FD57C0017BD5B /* SettingsViewController.swift */,
 				A1D7792A291FFBAE00DD1BE2 /* ProfileViewController.swift */,
+				A12C305B2921ED1E00D8BEC8 /* StringExtension.swift */,
+				A12C305D2921F94100D8BEC8 /* FieldExtension.swift */,
+				A11BAEFA2922050700E3F7DF /* AuthDelegate.swift */,
 			);
 			path = EZlearn;
 			sourceTree = "<group>";
@@ -212,6 +234,7 @@
 		BAA99C85B87035B5C210D7F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1F7B55929212A3800446474 /* Security.framework */,
 				A1FCBFFF2916D8A200530724 /* libGoogleAPIClientForREST.a */,
 				506B022C6C98E893054BECEC /* Pods_EZlearn.framework */,
 			);
@@ -239,6 +262,7 @@
 			name = EZlearn;
 			packageProductDependencies = (
 				A12494F0291EB00900069037 /* Lottie */,
+				A11BAEFD29223A9F00E3F7DF /* BSONSerialization */,
 			);
 			productName = EZlearn;
 			productReference = A1E022E2290CD30B001A2B12 /* EZlearn.app */;
@@ -314,6 +338,7 @@
 			mainGroup = A1E022D9290CD30B001A2B12;
 			packageReferences = (
 				A12494EF291EB00900069037 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				A11BAEFC29223A9F00E3F7DF /* XCRemoteSwiftPackageReference "BSONSerialization" */,
 			);
 			productRefGroup = A1E022E3290CD30B001A2B12 /* Products */;
 			projectDirPath = "";
@@ -331,7 +356,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4CD986529204B03005ACF34 /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 				A1D77929291FED5200DD1BE2 /* SourceSansPro-Light.otf in Resources */,
 				A1A8AC60291FE75B0017BD5B /* Montserrat-Regular.ttf in Resources */,
 				A12494EE291EAB5A00069037 /* book.json in Resources */,
@@ -341,6 +365,7 @@
 				A1E022ED290CD30B001A2B12 /* Main.storyboard in Resources */,
 				A1A8AC62291FE7B90017BD5B /* Montserrat-Medium.ttf in Resources */,
 				A12494F3291EB3A300069037 /* 28893-book-loading.json in Resources */,
+				A1A0BD7D291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 				A12494F5291EB44A00069037 /* 87271-atom-cascade-loader.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A0BD7E291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A0BD7F291623D300E69F4B /* client_137751831802-imk5cbs9nfror60a33t7ot8nicl6cdgd.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,15 +457,20 @@
 				A1E022EA290CD30B001A2B12 /* ViewController.swift in Sources */,
 				A1E02316290DA3EA001A2B12 /* AddTaskViewController.swift in Sources */,
 				A1E02318290DA9E0001A2B12 /* TaskTableViewCell.swift in Sources */,
+				A11BAEFB2922050700E3F7DF /* AuthDelegate.swift in Sources */,
+				A1434426292096FF007AB772 /* SignUpViewController.swift in Sources */,
 				A1E022E6290CD30B001A2B12 /* AppDelegate.swift in Sources */,
 				A1D7792B291FFBAE00DD1BE2 /* ProfileViewController.swift in Sources */,
+				A12C305E2921F94100D8BEC8 /* FieldExtension.swift in Sources */,
 				A12494EC291EA8C400069037 /* WelcomeViewController.swift in Sources */,
 				A1E0231A290DD63B001A2B12 /* UserTask.swift in Sources */,
 				A1A8AC5E291FDA0B0017BD5B /* SettingsTableViewCell.swift in Sources */,
 				A1E022E8290CD30B001A2B12 /* SceneDelegate.swift in Sources */,
 				A1A8AC5C291FD57C0017BD5B /* SettingsViewController.swift in Sources */,
 				A1F0651F290F5F1900A66163 /* HomeNavViewController.swift in Sources */,
+				A14344282920972B007AB772 /* SignInViewController.swift in Sources */,
 				A18650A0291ADFEE0090AEA9 /* OpenTaskViewController.swift in Sources */,
+				A12C305C2921ED1E00D8BEC8 /* StringExtension.swift in Sources */,
 				A110592629199E3A007BD9A2 /* EZlearnCoreData.xcdatamodeld in Sources */,
 				A1A0BD7B2916192300E69F4B /* Constants.swift in Sources */,
 			);
@@ -787,6 +819,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A11BAEFC29223A9F00E3F7DF /* XCRemoteSwiftPackageReference "BSONSerialization" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Frizlab/BSONSerialization";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		A12494EF291EB00900069037 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -798,6 +838,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A11BAEFD29223A9F00E3F7DF /* BSONSerialization */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A11BAEFC29223A9F00E3F7DF /* XCRemoteSwiftPackageReference "BSONSerialization" */;
+			productName = BSONSerialization;
+		};
 		A12494F0291EB00900069037 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A12494EF291EB00900069037 /* XCRemoteSwiftPackageReference "lottie-ios" */;

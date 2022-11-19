@@ -1,12 +1,39 @@
 {
   "pins" : [
     {
+      "identity" : "bsonserialization",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Frizlab/BSONSerialization",
+      "state" : {
+        "revision" : "903e2ea23a681bc746d8eca5e0a411cc24802577",
+        "version" : "2.1.7"
+      }
+    },
+    {
       "identity" : "lottie-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/lottie-ios.git",
       "state" : {
         "revision" : "b4bd0604ded9574807f41b4004b57dd1226a30a4",
         "version" : "3.5.0"
+      }
+    },
+    {
+      "identity" : "stream-reader",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Frizlab/stream-reader.git",
+      "state" : {
+        "revision" : "6c2ca97eb9c8cba174bee2249a0e5c891e7cc7fc",
+        "version" : "3.3.1"
+      }
+    },
+    {
+      "identity" : "swift-system",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-system.git",
+      "state" : {
+        "revision" : "025bcb1165deab2e20d4eaba79967ce73013f496",
+        "version" : "1.2.1"
       }
     }
   ],

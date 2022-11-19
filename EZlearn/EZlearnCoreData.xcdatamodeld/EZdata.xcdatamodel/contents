@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A380" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="LearningGoal" representedClassName="LearningGoal" syncable="YES" codeGenerationType="class">
         <attribute name="colorIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -9,13 +9,9 @@
     </entity>
     <entity name="Resource" representedClassName="Resource" syncable="YES" codeGenerationType="class"/>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="dayJoined" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="icon" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
-    <elements>
-        <element name="LearningGoal" positionX="160" positionY="192" width="128" height="104"/>
-        <element name="Resource" positionX="160" positionY="192" width="128" height="29"/>
-        <element name="User" positionX="160" positionY="192" width="128" height="74"/>
-    </elements>
 </model>

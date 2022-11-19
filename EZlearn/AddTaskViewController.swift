@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     
     @IBOutlet weak var taskField: UITextField!
@@ -51,7 +51,8 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         taskField.font =  UIFont.systemFont(ofSize: 20.0)
 
         
-        setDoneOnKeyboard()
+        self.taskField.delegate = self
+        //setDoneOnKeyboard()
         
     }
     
@@ -200,11 +201,11 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         //(tableView as? UITableView)?.indexPath(for: sender)
         
         checkmarks[tableView.indexPath(for: cell)!.row] = true
-        var vidID = videoIds[tableView.indexPath(for: cell)!.row]
-        var vidTitle = videoTitles[tableView.indexPath(for: cell)!.row]
-        var vidAuthor = channelIDs[tableView.indexPath(for: cell)!.row]
-        var vidThumb = videoThumbnails[tableView.indexPath(for: cell)!.row]
-        var newString = vidID + "~" + vidTitle + "~" + vidAuthor + "~" + vidThumb + "^"
+        let vidID = videoIds[tableView.indexPath(for: cell)!.row]
+        let vidTitle = videoTitles[tableView.indexPath(for: cell)!.row]
+        let vidAuthor = channelIDs[tableView.indexPath(for: cell)!.row]
+        let vidThumb = videoThumbnails[tableView.indexPath(for: cell)!.row]
+        let newString = vidID + "~" + vidTitle + "~" + vidAuthor + "~" + vidThumb + "~" + "false" + "^"
         savedResources += newString
         //savedResources.append(newString)
         //savedResources.append(<#T##self: &String##String#>)
@@ -241,12 +242,17 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             UIApplication.shared.openURL(url)
         }*/
     }
+    /*
     func setDoneOnKeyboard() {
         let ViewForDoneButtonOnKeyboard = UIToolbar()
         ViewForDoneButtonOnKeyboard.sizeToFit()
         let btnDoneOnKeyboard = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.dismissKeyboard))
         ViewForDoneButtonOnKeyboard.items = [btnDoneOnKeyboard]
         taskField.inputAccessoryView = ViewForDoneButtonOnKeyboard
+    }*/
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     @objc func dismissKeyboard() {
