@@ -71,7 +71,6 @@ class TaskTableViewCell: UITableViewCell {
         do {
             let results = try context.fetch(fetchRequest) as? [NSManagedObject]
             if results?.count != 0 { // Atleast one was returned
-
                 // In my case, I only updated the first item in results
                 results?[0].setValue(completed, forKey: "completed")
             }

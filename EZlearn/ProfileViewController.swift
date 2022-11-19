@@ -11,12 +11,30 @@ import CoreData
 
 
 class ProfileViewController: UIViewController {
+    var countCompleted:Int = 0
 
+    @IBOutlet weak var fifteenBadge: UIImageView!
+    @IBOutlet weak var tenBadge: UIImageView!
+    @IBOutlet weak var fiveBadge: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         print(GIDSignIn.sharedInstance() ?? "Not signed in")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        retrieveCompletedTask()
+        if countCompleted >= 5 {
+            fiveBadge.image = UIImage(named: "5unlocked")
+        }
+        if countCompleted >= 10 {
+            tenBadge.image = UIImage(named: "10unlocked")
+        }
+        if countCompleted >= 15 {
+            fifteenBadge.image = UIImage(named: "15unlocked")
+        }
     }
     
     
@@ -40,6 +58,25 @@ class ProfileViewController: UIViewController {
             print("Fetch Failed")
         }
         self.present(WelcomeViewController(), animated: true)
+    }
+    
+    func retrieveCompletedTask() {
+        countCompleted = 0
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        var context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LearningGoal")
+        
+        do {
+            let results = try context.fetch(fetchRequest) as! [NSManagedObject]
+            for result in results {
+                if (result.value(forKey: "completed") as! Bool? == true) {
+                    countCompleted += 1
+                }
+            }
+        } catch {
+            print("Fetch Failed: \(error)")
+        }
     }
 
     /*
